@@ -1,0 +1,2502 @@
+IQ-TREE multicore version 2.2.0-beta COVID-edition for Linux 64-bit built Dec 21 2021 built Dec 21 2021
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams, Ly Trong Nhan.
+
+Host:    sge1033 (AVX2, FMA3, 503 GB RAM)
+Command: iqtree2 -T AUTO --threads-max 10 -o Clostridium_thermobutyricum -au -zb 10000 -s /gpfs0/bioinfo/projects/Itzhak_Mizrahi/09.Sarahm/05.Trees/02.AU-TEST/data//Import/Import/OrthoGroup440.Protein.import.fasta -z /gpfs0/bioinfo/projects/Itzhak_Mizrahi/09.Sarahm/05.Trees/02.AU-TEST/data//Generic/Merge_Trees/My_Project.nwk -pre /gpfs0/bioinfo/projects/Itzhak_Mizrahi/09.Sarahm/05.Trees/02.AU-TEST/data//Generic/AU_TEST/OrthoGroup440/OrthoGroup440
+Seed:    739119 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Apr 15 21:45:50 2022
+Kernel:  AVX+FMA - auto-detect threads (72 CPU cores detected)
+
+Reading alignment file /gpfs0/bioinfo/projects/Itzhak_Mizrahi/09.Sarahm/05.Trees/02.AU-TEST/data//Import/Import/OrthoGroup440.Protein.import.fasta ... Fasta format detected
+Reading fasta file: done in 0.000428969 secs using 12.36% CPU
+Alignment most likely contains protein sequences
+Constructing alignment: done in 0.00335782 secs using 2354% CPU
+WARNING: 12 sites contain only gaps or ambiguous characters.
+Alignment has 31 sequences with 598 columns, 303 distinct patterns
+123 parsimony-informative, 138 singleton sites, 337 constant sites
+                             Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.00615634 secs using 3604% CPU
+   1  Clostridium_thermobutyricum   50.33%    passed     19.74%
+   2  Human_ERR414243_bin.4         49.33%    passed     87.53%
+   3  maccaque5                     49.16%    passed     99.99%
+   4  maccaque6                     49.16%    passed     99.99%
+   5  maccaque1                     49.16%    passed     99.95%
+   6  baboon1                       49.16%    passed     99.96%
+   7  Human_SRR5558136_bin.38       49.16%    passed     99.97%
+   8  maccaque2                     49.16%    passed     99.99%
+   9  maccaque3                     49.16%    passed     99.98%
+  10  maccaque4                     49.16%    passed     99.98%
+  11  maccaque7                     49.16%    passed     99.98%
+  12  Rumen_CADBNS01                53.18%    passed     99.99%
+  13  Rumen_CACVNT01                48.49%    passed     99.99%
+  14  Rumen_CACVSX01                48.49%    passed     99.77%
+  15  Rumen_CACYST01                49.00%    passed     99.91%
+  16  Rumen_CADBJG01                49.00%    passed     99.99%
+  17  Rumen_CACVRV01                49.00%    passed    100.00%
+  18  Rumen_CACWPH01                49.00%    passed    100.00%
+  19  Rumen_CACVQO01                49.50%    passed     99.88%
+  20  Human_SRR5056681_bin.100      51.00%    passed    100.00%
+  21  Human_SRR5056841_bin.46       51.00%    passed    100.00%
+  22  Human_SRR5056944_bin.12       51.00%    passed    100.00%
+  23  Human_SRR5056994_bin.72       51.00%    passed    100.00%
+  24  Human_SRR6028624_bin.16       51.00%    passed    100.00%
+  25  Human_SRR5056817_bin.33       53.18%    passed    100.00%
+  26  Rumen_CADAEW01                47.66%    passed    100.00%
+  27  Rumen_CADAIA01                47.66%    passed    100.00%
+  28  Rumen_CACWMC01                72.41%    passed     96.04%
+  29  Rumen_CACWMY01                 3.34%    passed     59.00%
+  30  Rumen_CACVSO01                53.18%    passed     99.86%
+  31  Rumen_CACWHG01                49.33%    passed     95.88%
+WARNING: 10 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                         49.02%  0 sequences failed composition chi2 test (p-value<5%; df=19)
+NOTE: maccaque6 is identical to maccaque5 but kept for subsequent analysis
+NOTE: maccaque4 is identical to maccaque3 but kept for subsequent analysis
+NOTE: Human_SRR5056841_bin.46 is identical to Human_SRR5056681_bin.100 but kept for subsequent analysis
+NOTE: Rumen_CADAIA01 is identical to Rumen_CADAEW01 but kept for subsequent analysis
+Checking for duplicate sequences: done in 0.00714231 secs using 3402% CPU
+Identifying sites to remove: done in 0.000651335 secs using 337% CPU
+NOTE: 4 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: maccaque7 (identical to maccaque3) is ignored but added at the end
+NOTE: Human_SRR5056944_bin.12 (identical to Human_SRR5056681_bin.100) is ignored but added at the end
+NOTE: Human_SRR5056994_bin.72 (identical to Human_SRR5056681_bin.100) is ignored but added at the end
+NOTE: Human_SRR6028624_bin.16 (identical to Human_SRR5056681_bin.100) is ignored but added at the end
+Alignment was printed to /gpfs0/bioinfo/projects/Itzhak_Mizrahi/09.Sarahm/05.Trees/02.AU-TEST/data//Generic/AU_TEST/OrthoGroup440/OrthoGroup440.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to /gpfs0/bioinfo/projects/Itzhak_Mizrahi/09.Sarahm/05.Trees/02.AU-TEST/data//Generic/AU_TEST/OrthoGroup440/OrthoGroup440.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.001 seconds
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+42 trees examined
+Threads: 1 / Time: 10.032 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6222
+Threads: 2 / Time: 5.167 sec / Speedup: 1.942 / Efficiency: 97% / LogL: -6222
+Threads: 3 / Time: 4.354 sec / Speedup: 2.304 / Efficiency: 77% / LogL: -6222
+Threads: 4 / Time: 2.988 sec / Speedup: 3.357 / Efficiency: 84% / LogL: -6222
+Threads: 5 / Time: 2.552 sec / Speedup: 3.930 / Efficiency: 79% / LogL: -6222
+Threads: 6 / Time: 2.254 sec / Speedup: 4.450 / Efficiency: 74% / LogL: -6222
+Threads: 7 / Time: 2.127 sec / Speedup: 4.716 / Efficiency: 67% / LogL: -6222
+Threads: 8 / Time: 2.044 sec / Speedup: 4.909 / Efficiency: 61% / LogL: -6222
+Threads: 9 / Time: 1.819 sec / Speedup: 5.516 / Efficiency: 61% / LogL: -6222
+Threads: 10 / Time: 1.952 sec / Speedup: 5.138 / Efficiency: 51% / LogL: -6222
+Determining AUTO threadcount: done in 35.2912 secs using 390.5% CPU
+BEST NUMBER OF THREADS: 9
+
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Optimizing NNI: done in 0.347066 secs using 893.2% CPU
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -4926.197
+2. Current log-likelihood: -4922.487
+3. Current log-likelihood: -4921.120
+Optimal log-likelihood: -4920.196
+Proportion of invariable sites: 0.072
+Gamma shape alpha: 0.620
+Parameters optimization took 3 rounds (0.056 sec)
+Time for fast ML tree search: 0.475 seconds
+
+NOTE: ModelFinder requires 13 MB RAM!
+ModelFinder will test up to 780 protein models (sample size: 598) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+202 trees examined
+Threads: 1 / Time: 10.029 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6909
+Threads: 2 / Time: 6.257 sec / Speedup: 1.603 / Efficiency: 80% / LogL: -6909
+Threads: 3 / Time: 4.645 sec / Speedup: 2.159 / Efficiency: 72% / LogL: -6909
+Threads: 4 / Time: 4.072 sec / Speedup: 2.463 / Efficiency: 62% / LogL: -6909
+Threads: 5 / Time: 3.710 sec / Speedup: 2.704 / Efficiency: 54% / LogL: -6909
+Threads: 6 / Time: 3.525 sec / Speedup: 2.845 / Efficiency: 47% / LogL: -6909
+Determining AUTO threadcount: done in 32.2389 secs using 282.7% CPU
+BEST NUMBER OF THREADS: 5
+
+  1  LG            5106.455     51  10314.910    10324.624    10538.983
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+188 trees examined
+Threads: 1 / Time: 10.011 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -7005
+Threads: 2 / Time: 6.073 sec / Speedup: 1.649 / Efficiency: 82% / LogL: -7005
+Threads: 3 / Time: 4.476 sec / Speedup: 2.237 / Efficiency: 75% / LogL: -7005
+Threads: 4 / Time: 4.054 sec / Speedup: 2.469 / Efficiency: 62% / LogL: -7005
+Threads: 5 / Time: 3.581 sec / Speedup: 2.796 / Efficiency: 56% / LogL: -7005
+Threads: 6 / Time: 3.323 sec / Speedup: 3.012 / Efficiency: 50% / LogL: -7005
+Threads: 7 / Time: 4.276 sec / Speedup: 2.341 / Efficiency: 33% / LogL: -7005
+Determining AUTO threadcount: done in 35.7946 secs using 329.4% CPU
+BEST NUMBER OF THREADS: 6
+
+  2  LG+I          5079.263     52  10262.525    10272.639    10490.992
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+48 trees examined
+Threads: 1 / Time: 10.147 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6200
+Threads: 2 / Time: 5.543 sec / Speedup: 1.831 / Efficiency: 92% / LogL: -6200
+Threads: 3 / Time: 4.038 sec / Speedup: 2.513 / Efficiency: 84% / LogL: -6200
+Threads: 4 / Time: 3.448 sec / Speedup: 2.943 / Efficiency: 74% / LogL: -6200
+Threads: 5 / Time: 3.383 sec / Speedup: 3.000 / Efficiency: 60% / LogL: -6200
+Threads: 6 / Time: 2.750 sec / Speedup: 3.690 / Efficiency: 62% / LogL: -6200
+Threads: 7 / Time: 2.622 sec / Speedup: 3.870 / Efficiency: 55% / LogL: -6200
+Threads: 8 / Time: 2.955 sec / Speedup: 3.434 / Efficiency: 43% / LogL: -6200
+Determining AUTO threadcount: done in 34.887 secs using 348.7% CPU
+BEST NUMBER OF THREADS: 6
+
+  3  LG+G4         4918.862     52  9941.724     9951.838     10170.191
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+41 trees examined
+Threads: 1 / Time: 10.185 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6419
+Threads: 2 / Time: 5.107 sec / Speedup: 1.994 / Efficiency: 100% / LogL: -6419
+Threads: 3 / Time: 4.477 sec / Speedup: 2.275 / Efficiency: 76% / LogL: -6419
+Threads: 4 / Time: 3.727 sec / Speedup: 2.733 / Efficiency: 68% / LogL: -6419
+Threads: 5 / Time: 3.142 sec / Speedup: 3.242 / Efficiency: 65% / LogL: -6419
+Threads: 6 / Time: 3.044 sec / Speedup: 3.346 / Efficiency: 56% / LogL: -6419
+Threads: 7 / Time: 2.841 sec / Speedup: 3.585 / Efficiency: 51% / LogL: -6419
+Threads: 8 / Time: 2.728 sec / Speedup: 3.733 / Efficiency: 47% / LogL: -6419
+Determining AUTO threadcount: done in 35.2515 secs using 350.3% CPU
+BEST NUMBER OF THREADS: 7
+
+  4  LG+I+G4       4918.843     53  9943.686     9954.208     10176.546
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+96 trees examined
+Threads: 1 / Time: 10.109 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6024
+Threads: 2 / Time: 5.756 sec / Speedup: 1.756 / Efficiency: 88% / LogL: -6024
+Threads: 3 / Time: 4.561 sec / Speedup: 2.216 / Efficiency: 74% / LogL: -6024
+Threads: 4 / Time: 3.557 sec / Speedup: 2.842 / Efficiency: 71% / LogL: -6024
+Threads: 5 / Time: 3.107 sec / Speedup: 3.254 / Efficiency: 65% / LogL: -6024
+Threads: 6 / Time: 2.917 sec / Speedup: 3.466 / Efficiency: 58% / LogL: -6024
+Threads: 7 / Time: 3.293 sec / Speedup: 3.070 / Efficiency: 44% / LogL: -6024
+Determining AUTO threadcount: done in 33.3018 secs using 313.9% CPU
+BEST NUMBER OF THREADS: 6
+
+  5  LG+R2         4906.967     53  9919.934     9930.456     10152.795
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+64 trees examined
+Threads: 1 / Time: 10.160 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -5837
+Threads: 2 / Time: 5.618 sec / Speedup: 1.808 / Efficiency: 90% / LogL: -5837
+Threads: 3 / Time: 4.709 sec / Speedup: 2.158 / Efficiency: 72% / LogL: -5837
+Threads: 4 / Time: 4.149 sec / Speedup: 2.449 / Efficiency: 61% / LogL: -5837
+Threads: 5 / Time: 3.556 sec / Speedup: 2.857 / Efficiency: 57% / LogL: -5837
+Threads: 6 / Time: 3.340 sec / Speedup: 3.042 / Efficiency: 51% / LogL: -5837
+Threads: 7 / Time: 3.148 sec / Speedup: 3.227 / Efficiency: 46% / LogL: -5837
+Determining AUTO threadcount: done in 34.682 secs using 320% CPU
+BEST NUMBER OF THREADS: 6
+
+  6  LG+R3         4898.012     55  9906.024     9917.389     10147.672
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+48 trees examined
+Threads: 1 / Time: 10.190 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -5903
+Threads: 2 / Time: 5.636 sec / Speedup: 1.808 / Efficiency: 90% / LogL: -5903
+Threads: 3 / Time: 5.539 sec / Speedup: 1.840 / Efficiency: 61% / LogL: -5903
+Threads: 4 / Time: 3.468 sec / Speedup: 2.938 / Efficiency: 73% / LogL: -5903
+Threads: 5 / Time: 3.084 sec / Speedup: 3.304 / Efficiency: 66% / LogL: -5903
+Threads: 6 / Time: 2.832 sec / Speedup: 3.598 / Efficiency: 60% / LogL: -5903
+Threads: 7 / Time: 2.971 sec / Speedup: 3.430 / Efficiency: 49% / LogL: -5903
+Determining AUTO threadcount: done in 33.7212 secs using 309.5% CPU
+BEST NUMBER OF THREADS: 6
+
+  7  LG+R4         4897.067     57  9908.135     9920.379     10158.569
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+98 trees examined
+Threads: 1 / Time: 10.075 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6462
+Threads: 2 / Time: 5.965 sec / Speedup: 1.689 / Efficiency: 84% / LogL: -6462
+Threads: 3 / Time: 5.626 sec / Speedup: 1.791 / Efficiency: 60% / LogL: -6462
+Threads: 4 / Time: 3.530 sec / Speedup: 2.854 / Efficiency: 71% / LogL: -6462
+Threads: 5 / Time: 3.643 sec / Speedup: 2.766 / Efficiency: 55% / LogL: -6462
+Threads: 6 / Time: 3.683 sec / Speedup: 2.735 / Efficiency: 46% / LogL: -6462
+Determining AUTO threadcount: done in 32.5227 secs using 284% CPU
+BEST NUMBER OF THREADS: 4
+
+ 18  LG+F+R2       4850.769     72  9845.538     9865.561     10161.877
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+65 trees examined
+Threads: 1 / Time: 10.176 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -5991
+Threads: 2 / Time: 5.681 sec / Speedup: 1.791 / Efficiency: 90% / LogL: -5991
+Threads: 3 / Time: 4.555 sec / Speedup: 2.234 / Efficiency: 74% / LogL: -5991
+Threads: 4 / Time: 3.688 sec / Speedup: 2.759 / Efficiency: 69% / LogL: -5991
+Threads: 5 / Time: 3.115 sec / Speedup: 3.267 / Efficiency: 65% / LogL: -5991
+Threads: 6 / Time: 2.710 sec / Speedup: 3.756 / Efficiency: 63% / LogL: -5991
+Threads: 7 / Time: 2.944 sec / Speedup: 3.456 / Efficiency: 49% / LogL: -5991
+Determining AUTO threadcount: done in 32.8712 secs using 308.7% CPU
+BEST NUMBER OF THREADS: 6
+
+ 19  LG+F+R3       4839.586     74  9827.173     9848.396     10152.298
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+97 trees examined
+Threads: 1 / Time: 10.006 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6321
+Threads: 2 / Time: 6.028 sec / Speedup: 1.660 / Efficiency: 83% / LogL: -6321
+Threads: 3 / Time: 4.289 sec / Speedup: 2.333 / Efficiency: 78% / LogL: -6321
+Threads: 4 / Time: 3.460 sec / Speedup: 2.892 / Efficiency: 72% / LogL: -6321
+Threads: 5 / Time: 3.377 sec / Speedup: 2.963 / Efficiency: 59% / LogL: -6321
+Threads: 6 / Time: 2.821 sec / Speedup: 3.547 / Efficiency: 59% / LogL: -6321
+Threads: 7 / Time: 2.733 sec / Speedup: 3.662 / Efficiency: 52% / LogL: -6321
+Threads: 8 / Time: 2.947 sec / Speedup: 3.396 / Efficiency: 42% / LogL: -6321
+Determining AUTO threadcount: done in 35.6619 secs using 347.7% CPU
+BEST NUMBER OF THREADS: 6
+
+ 31  WAG+R2        4966.510     53  10039.020    10049.542    10271.880
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+64 trees examined
+Threads: 1 / Time: 10.003 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6230
+Threads: 2 / Time: 5.942 sec / Speedup: 1.684 / Efficiency: 84% / LogL: -6230
+Threads: 3 / Time: 4.865 sec / Speedup: 2.056 / Efficiency: 69% / LogL: -6230
+Threads: 4 / Time: 4.327 sec / Speedup: 2.312 / Efficiency: 58% / LogL: -6230
+Threads: 5 / Time: 3.609 sec / Speedup: 2.772 / Efficiency: 55% / LogL: -6230
+Threads: 6 / Time: 2.929 sec / Speedup: 3.415 / Efficiency: 57% / LogL: -6230
+Threads: 7 / Time: 3.073 sec / Speedup: 3.255 / Efficiency: 47% / LogL: -6230
+Determining AUTO threadcount: done in 34.7501 secs using 316.4% CPU
+BEST NUMBER OF THREADS: 6
+
+ 32  WAG+R3        4961.138     55  10032.275    10043.641    10273.923
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+98 trees examined
+Threads: 1 / Time: 10.009 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6656
+Threads: 2 / Time: 6.336 sec / Speedup: 1.580 / Efficiency: 79% / LogL: -6656
+Threads: 3 / Time: 4.682 sec / Speedup: 2.138 / Efficiency: 71% / LogL: -6656
+Threads: 4 / Time: 4.725 sec / Speedup: 2.118 / Efficiency: 53% / LogL: -6656
+Threads: 5 / Time: 3.360 sec / Speedup: 2.979 / Efficiency: 60% / LogL: -6656
+Threads: 6 / Time: 2.823 sec / Speedup: 3.545 / Efficiency: 59% / LogL: -6656
+Threads: 7 / Time: 2.610 sec / Speedup: 3.835 / Efficiency: 55% / LogL: -6656
+Threads: 8 / Time: 2.737 sec / Speedup: 3.657 / Efficiency: 46% / LogL: -6656
+Determining AUTO threadcount: done in 37.2846 secs using 343.8% CPU
+BEST NUMBER OF THREADS: 7
+
+ 44  WAG+F+R2      4865.403     72  9874.806     9894.829     10191.144
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+65 trees examined
+Threads: 1 / Time: 10.161 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6533
+Threads: 2 / Time: 5.860 sec / Speedup: 1.734 / Efficiency: 87% / LogL: -6533
+Threads: 3 / Time: 4.599 sec / Speedup: 2.209 / Efficiency: 74% / LogL: -6533
+Threads: 4 / Time: 4.107 sec / Speedup: 2.474 / Efficiency: 62% / LogL: -6533
+Threads: 5 / Time: 3.738 sec / Speedup: 2.718 / Efficiency: 54% / LogL: -6533
+Threads: 6 / Time: 2.604 sec / Speedup: 3.902 / Efficiency: 65% / LogL: -6533
+Threads: 7 / Time: 2.471 sec / Speedup: 4.113 / Efficiency: 59% / LogL: -6533
+Threads: 8 / Time: 2.602 sec / Speedup: 3.906 / Efficiency: 49% / LogL: -6533
+Determining AUTO threadcount: done in 36.1433 secs using 341.5% CPU
+BEST NUMBER OF THREADS: 7
+
+ 45  WAG+F+R3      4856.766     74  9861.531     9882.755     10186.657
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+81 trees examined
+Threads: 1 / Time: 10.075 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6340
+Threads: 2 / Time: 4.934 sec / Speedup: 2.042 / Efficiency: 102% / LogL: -6340
+Threads: 3 / Time: 3.919 sec / Speedup: 2.571 / Efficiency: 86% / LogL: -6340
+Threads: 4 / Time: 3.021 sec / Speedup: 3.335 / Efficiency: 83% / LogL: -6340
+Threads: 5 / Time: 3.336 sec / Speedup: 3.020 / Efficiency: 60% / LogL: -6340
+Determining AUTO threadcount: done in 25.2857 secs using 236.6% CPU
+BEST NUMBER OF THREADS: 4
+
+ 57  JTT+R2        4967.857     53  10041.714    10052.236    10274.575
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+63 trees examined
+Threads: 1 / Time: 10.079 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6068
+Threads: 2 / Time: 6.161 sec / Speedup: 1.636 / Efficiency: 82% / LogL: -6068
+Threads: 3 / Time: 4.772 sec / Speedup: 2.112 / Efficiency: 70% / LogL: -6068
+Threads: 4 / Time: 3.331 sec / Speedup: 3.026 / Efficiency: 76% / LogL: -6068
+Threads: 5 / Time: 3.502 sec / Speedup: 2.878 / Efficiency: 58% / LogL: -6068
+Threads: 6 / Time: 2.719 sec / Speedup: 3.707 / Efficiency: 62% / LogL: -6068
+Threads: 7 / Time: 2.927 sec / Speedup: 3.443 / Efficiency: 49% / LogL: -6068
+Determining AUTO threadcount: done in 33.4914 secs using 308.9% CPU
+BEST NUMBER OF THREADS: 6
+
+ 58  JTT+R3        4960.015     55  10030.030    10041.396    10271.678
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+98 trees examined
+Threads: 1 / Time: 10.105 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6604
+Threads: 2 / Time: 5.979 sec / Speedup: 1.690 / Efficiency: 85% / LogL: -6604
+Threads: 3 / Time: 4.354 sec / Speedup: 2.321 / Efficiency: 77% / LogL: -6604
+Threads: 4 / Time: 4.427 sec / Speedup: 2.282 / Efficiency: 57% / LogL: -6604
+Threads: 5 / Time: 3.328 sec / Speedup: 3.036 / Efficiency: 61% / LogL: -6604
+Threads: 6 / Time: 2.981 sec / Speedup: 3.389 / Efficiency: 56% / LogL: -6604
+Threads: 7 / Time: 3.001 sec / Speedup: 3.367 / Efficiency: 48% / LogL: -6604
+Determining AUTO threadcount: done in 34.1772 secs using 313.9% CPU
+BEST NUMBER OF THREADS: 6
+
+ 70  JTT+F+R2      4884.162     72  9912.323     9932.346     10228.662
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+64 trees examined
+Threads: 1 / Time: 10.165 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -5789
+Threads: 2 / Time: 5.580 sec / Speedup: 1.821 / Efficiency: 91% / LogL: -5789
+Threads: 3 / Time: 4.070 sec / Speedup: 2.498 / Efficiency: 83% / LogL: -5789
+Threads: 4 / Time: 3.774 sec / Speedup: 2.694 / Efficiency: 67% / LogL: -5789
+Threads: 5 / Time: 2.961 sec / Speedup: 3.433 / Efficiency: 69% / LogL: -5789
+Threads: 6 / Time: 3.100 sec / Speedup: 3.279 / Efficiency: 55% / LogL: -5789
+Threads: 7 / Time: 3.125 sec / Speedup: 3.253 / Efficiency: 46% / LogL: -5789
+Determining AUTO threadcount: done in 32.7747 secs using 314.4% CPU
+BEST NUMBER OF THREADS: 5
+
+ 71  JTT+F+R3      4872.053     74  9892.105     9913.329     10217.231
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+101 trees examined
+Threads: 1 / Time: 10.058 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6385
+Threads: 2 / Time: 6.106 sec / Speedup: 1.647 / Efficiency: 82% / LogL: -6385
+Threads: 3 / Time: 4.297 sec / Speedup: 2.341 / Efficiency: 78% / LogL: -6385
+Threads: 4 / Time: 3.882 sec / Speedup: 2.591 / Efficiency: 65% / LogL: -6385
+Threads: 5 / Time: 3.669 sec / Speedup: 2.741 / Efficiency: 55% / LogL: -6385
+Threads: 6 / Time: 3.852 sec / Speedup: 2.611 / Efficiency: 44% / LogL: -6385
+Determining AUTO threadcount: done in 31.8649 secs using 286.4% CPU
+BEST NUMBER OF THREADS: 5
+
+ 83  Q.pfam+R2     4923.802     53  9953.604     9964.126     10186.464
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+62 trees examined
+Threads: 1 / Time: 10.065 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -5982
+Threads: 2 / Time: 5.582 sec / Speedup: 1.803 / Efficiency: 90% / LogL: -5982
+Threads: 3 / Time: 4.427 sec / Speedup: 2.273 / Efficiency: 76% / LogL: -5982
+Threads: 4 / Time: 3.828 sec / Speedup: 2.629 / Efficiency: 66% / LogL: -5982
+Threads: 5 / Time: 3.084 sec / Speedup: 3.264 / Efficiency: 65% / LogL: -5982
+Threads: 6 / Time: 3.518 sec / Speedup: 2.861 / Efficiency: 48% / LogL: -5982
+Determining AUTO threadcount: done in 30.5046 secs using 280.6% CPU
+BEST NUMBER OF THREADS: 5
+
+ 84  Q.pfam+R3     4914.655     55  9939.310     9950.675     10180.957
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+96 trees examined
+Threads: 1 / Time: 10.030 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -5984
+Threads: 2 / Time: 5.706 sec / Speedup: 1.758 / Efficiency: 88% / LogL: -5984
+Threads: 3 / Time: 4.599 sec / Speedup: 2.181 / Efficiency: 73% / LogL: -5984
+Threads: 4 / Time: 4.439 sec / Speedup: 2.259 / Efficiency: 56% / LogL: -5984
+Threads: 5 / Time: 4.262 sec / Speedup: 2.353 / Efficiency: 47% / LogL: -5984
+Determining AUTO threadcount: done in 29.0354 secs using 253.3% CPU
+BEST NUMBER OF THREADS: 3
+
+ 96  Q.pfam+F+R2   4858.973     72  9861.945     9881.968     10178.284
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+60 trees examined
+Threads: 1 / Time: 10.108 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6324
+Threads: 2 / Time: 5.349 sec / Speedup: 1.890 / Efficiency: 94% / LogL: -6324
+Threads: 3 / Time: 4.279 sec / Speedup: 2.362 / Efficiency: 79% / LogL: -6324
+Threads: 4 / Time: 3.578 sec / Speedup: 2.825 / Efficiency: 71% / LogL: -6324
+Threads: 5 / Time: 3.086 sec / Speedup: 3.276 / Efficiency: 66% / LogL: -6324
+Threads: 6 / Time: 2.553 sec / Speedup: 3.959 / Efficiency: 66% / LogL: -6324
+Threads: 7 / Time: 2.877 sec / Speedup: 3.513 / Efficiency: 50% / LogL: -6324
+Determining AUTO threadcount: done in 31.8312 secs using 307.9% CPU
+BEST NUMBER OF THREADS: 6
+
+ 97  Q.pfam+F+R3   4846.976     74  9841.951     9863.175     10167.077
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+94 trees examined
+Threads: 1 / Time: 10.027 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -5597
+Threads: 2 / Time: 5.842 sec / Speedup: 1.717 / Efficiency: 86% / LogL: -5597
+Threads: 3 / Time: 4.275 sec / Speedup: 2.345 / Efficiency: 78% / LogL: -5597
+Threads: 4 / Time: 3.671 sec / Speedup: 2.731 / Efficiency: 68% / LogL: -5597
+Threads: 5 / Time: 3.691 sec / Speedup: 2.717 / Efficiency: 54% / LogL: -5597
+Threads: 6 / Time: 3.004 sec / Speedup: 3.338 / Efficiency: 56% / LogL: -5597
+Threads: 7 / Time: 3.242 sec / Speedup: 3.093 / Efficiency: 44% / LogL: -5597
+Determining AUTO threadcount: done in 33.7525 secs using 317.9% CPU
+BEST NUMBER OF THREADS: 6
+
+109  Q.bird+R2     5044.399     53  10194.798    10205.320    10427.658
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+59 trees examined
+Threads: 1 / Time: 10.097 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6966
+Threads: 2 / Time: 6.124 sec / Speedup: 1.649 / Efficiency: 82% / LogL: -6966
+Threads: 3 / Time: 3.908 sec / Speedup: 2.584 / Efficiency: 86% / LogL: -6966
+Threads: 4 / Time: 3.145 sec / Speedup: 3.210 / Efficiency: 80% / LogL: -6966
+Threads: 5 / Time: 3.305 sec / Speedup: 3.054 / Efficiency: 61% / LogL: -6966
+Threads: 6 / Time: 2.597 sec / Speedup: 3.888 / Efficiency: 65% / LogL: -6966
+Threads: 7 / Time: 2.311 sec / Speedup: 4.368 / Efficiency: 62% / LogL: -6966
+Threads: 8 / Time: 2.532 sec / Speedup: 3.988 / Efficiency: 50% / LogL: -6966
+Determining AUTO threadcount: done in 34.0203 secs using 335.7% CPU
+BEST NUMBER OF THREADS: 7
+
+110  Q.bird+R3     5032.272     55  10174.544    10185.909    10416.191
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+97 trees examined
+Threads: 1 / Time: 10.031 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -5865
+Threads: 2 / Time: 7.641 sec / Speedup: 1.313 / Efficiency: 66% / LogL: -5865
+Threads: 3 / Time: 5.484 sec / Speedup: 1.829 / Efficiency: 61% / LogL: -5865
+Threads: 4 / Time: 4.659 sec / Speedup: 2.153 / Efficiency: 54% / LogL: -5865
+Threads: 5 / Time: 3.171 sec / Speedup: 3.164 / Efficiency: 63% / LogL: -5865
+Threads: 6 / Time: 2.884 sec / Speedup: 3.478 / Efficiency: 58% / LogL: -5865
+Threads: 7 / Time: 2.687 sec / Speedup: 3.733 / Efficiency: 53% / LogL: -5865
+Threads: 8 / Time: 2.655 sec / Speedup: 3.778 / Efficiency: 47% / LogL: -5865
+Determining AUTO threadcount: done in 39.2132 secs using 337.4% CPU
+BEST NUMBER OF THREADS: 7
+
+122  Q.bird+F+R2   4944.127     72  10032.255    10052.278    10348.593
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+60 trees examined
+Threads: 1 / Time: 10.032 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6161
+Threads: 2 / Time: 5.492 sec / Speedup: 1.827 / Efficiency: 91% / LogL: -6161
+Threads: 3 / Time: 4.328 sec / Speedup: 2.318 / Efficiency: 77% / LogL: -6161
+Threads: 4 / Time: 3.923 sec / Speedup: 2.557 / Efficiency: 64% / LogL: -6161
+Threads: 5 / Time: 3.444 sec / Speedup: 2.913 / Efficiency: 58% / LogL: -6161
+Threads: 6 / Time: 2.551 sec / Speedup: 3.933 / Efficiency: 66% / LogL: -6161
+Threads: 7 / Time: 2.479 sec / Speedup: 4.048 / Efficiency: 58% / LogL: -6161
+Threads: 8 / Time: 2.734 sec / Speedup: 3.670 / Efficiency: 46% / LogL: -6161
+Determining AUTO threadcount: done in 34.9838 secs using 344.1% CPU
+BEST NUMBER OF THREADS: 6
+
+123  Q.bird+F+R3   4928.736     74  10005.472    10026.696    10330.598
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+94 trees examined
+Threads: 1 / Time: 10.023 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6610
+Threads: 2 / Time: 5.512 sec / Speedup: 1.818 / Efficiency: 91% / LogL: -6610
+Threads: 3 / Time: 4.212 sec / Speedup: 2.379 / Efficiency: 79% / LogL: -6610
+Threads: 4 / Time: 3.421 sec / Speedup: 2.930 / Efficiency: 73% / LogL: -6610
+Threads: 5 / Time: 2.972 sec / Speedup: 3.372 / Efficiency: 67% / LogL: -6610
+Threads: 6 / Time: 2.704 sec / Speedup: 3.707 / Efficiency: 62% / LogL: -6610
+Threads: 7 / Time: 3.278 sec / Speedup: 3.058 / Efficiency: 44% / LogL: -6610
+Determining AUTO threadcount: done in 32.1216 secs using 312.5% CPU
+BEST NUMBER OF THREADS: 6
+
+135  Q.mammal+R2   5036.628     53  10179.257    10189.779    10412.117
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+62 trees examined
+Threads: 1 / Time: 10.130 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -5834
+Threads: 2 / Time: 5.677 sec / Speedup: 1.784 / Efficiency: 89% / LogL: -5834
+Threads: 3 / Time: 4.861 sec / Speedup: 2.084 / Efficiency: 69% / LogL: -5834
+Threads: 4 / Time: 3.572 sec / Speedup: 2.836 / Efficiency: 71% / LogL: -5834
+Threads: 5 / Time: 2.954 sec / Speedup: 3.430 / Efficiency: 69% / LogL: -5834
+Threads: 6 / Time: 2.608 sec / Speedup: 3.885 / Efficiency: 65% / LogL: -5834
+Threads: 7 / Time: 2.777 sec / Speedup: 3.648 / Efficiency: 52% / LogL: -5834
+Threads: 8 / Time: 2.889 sec / Speedup: 3.507 / Efficiency: 44% / LogL: -5834
+Determining AUTO threadcount: done in 35.4692 secs using 344.8% CPU
+BEST NUMBER OF THREADS: 6
+
+136  Q.mammal+R3   5026.064     55  10162.128    10173.494    10403.776
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+97 trees examined
+Threads: 1 / Time: 10.079 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6108
+Threads: 2 / Time: 5.922 sec / Speedup: 1.702 / Efficiency: 85% / LogL: -6108
+Threads: 3 / Time: 4.485 sec / Speedup: 2.247 / Efficiency: 75% / LogL: -6108
+Threads: 4 / Time: 4.556 sec / Speedup: 2.212 / Efficiency: 55% / LogL: -6108
+Threads: 5 / Time: 3.811 sec / Speedup: 2.645 / Efficiency: 53% / LogL: -6108
+Threads: 6 / Time: 3.577 sec / Speedup: 2.818 / Efficiency: 47% / LogL: -6108
+Determining AUTO threadcount: done in 32.4297 secs using 287% CPU
+BEST NUMBER OF THREADS: 5
+
+148  Q.mammal+F+R2 4922.517     72  9989.033     10009.056    10305.372
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+63 trees examined
+Threads: 1 / Time: 10.016 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6456
+Threads: 2 / Time: 5.615 sec / Speedup: 1.784 / Efficiency: 89% / LogL: -6456
+Threads: 3 / Time: 4.037 sec / Speedup: 2.481 / Efficiency: 83% / LogL: -6456
+Threads: 4 / Time: 3.589 sec / Speedup: 2.791 / Efficiency: 70% / LogL: -6456
+Threads: 5 / Time: 3.125 sec / Speedup: 3.205 / Efficiency: 64% / LogL: -6456
+Threads: 6 / Time: 3.170 sec / Speedup: 3.160 / Efficiency: 53% / LogL: -6456
+Threads: 7 / Time: 3.044 sec / Speedup: 3.290 / Efficiency: 47% / LogL: -6456
+Determining AUTO threadcount: done in 32.5961 secs using 315.4% CPU
+BEST NUMBER OF THREADS: 5
+
+149  Q.mammal+F+R3 4908.052     74  9964.104     9985.328     10289.230
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+97 trees examined
+Threads: 1 / Time: 10.034 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6147
+Threads: 2 / Time: 5.820 sec / Speedup: 1.724 / Efficiency: 86% / LogL: -6147
+Threads: 3 / Time: 4.312 sec / Speedup: 2.327 / Efficiency: 78% / LogL: -6147
+Threads: 4 / Time: 4.125 sec / Speedup: 2.433 / Efficiency: 61% / LogL: -6147
+Threads: 5 / Time: 4.174 sec / Speedup: 2.404 / Efficiency: 48% / LogL: -6147
+Determining AUTO threadcount: done in 28.4647 secs using 250.2% CPU
+BEST NUMBER OF THREADS: 3
+
+161  Q.insect+R2   4930.490     53  9966.980     9977.502     10199.840
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+65 trees examined
+Threads: 1 / Time: 10.174 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6714
+Threads: 2 / Time: 5.729 sec / Speedup: 1.776 / Efficiency: 89% / LogL: -6714
+Threads: 3 / Time: 4.208 sec / Speedup: 2.418 / Efficiency: 81% / LogL: -6714
+Threads: 4 / Time: 3.419 sec / Speedup: 2.976 / Efficiency: 74% / LogL: -6714
+Threads: 5 / Time: 3.337 sec / Speedup: 3.049 / Efficiency: 61% / LogL: -6714
+Threads: 6 / Time: 3.286 sec / Speedup: 3.096 / Efficiency: 52% / LogL: -6714
+Threads: 7 / Time: 3.336 sec / Speedup: 3.050 / Efficiency: 44% / LogL: -6714
+Determining AUTO threadcount: done in 33.4905 secs using 318.7% CPU
+BEST NUMBER OF THREADS: 4
+
+162  Q.insect+R3   4921.572     55  9953.145     9964.510     10194.792
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+95 trees examined
+Threads: 1 / Time: 10.089 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6467
+Threads: 2 / Time: 6.166 sec / Speedup: 1.636 / Efficiency: 82% / LogL: -6467
+Threads: 3 / Time: 4.032 sec / Speedup: 2.502 / Efficiency: 83% / LogL: -6467
+Threads: 4 / Time: 3.325 sec / Speedup: 3.034 / Efficiency: 76% / LogL: -6467
+Threads: 5 / Time: 3.448 sec / Speedup: 2.926 / Efficiency: 59% / LogL: -6467
+Threads: 6 / Time: 3.425 sec / Speedup: 2.946 / Efficiency: 49% / LogL: -6467
+Determining AUTO threadcount: done in 30.4851 secs using 277.9% CPU
+BEST NUMBER OF THREADS: 4
+
+174  Q.insect+F+R2 4869.414     72  9882.828     9902.851     10199.167
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+66 trees examined
+Threads: 1 / Time: 10.034 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6037
+Threads: 2 / Time: 5.562 sec / Speedup: 1.804 / Efficiency: 90% / LogL: -6037
+Threads: 3 / Time: 4.066 sec / Speedup: 2.468 / Efficiency: 82% / LogL: -6037
+Threads: 4 / Time: 3.322 sec / Speedup: 3.020 / Efficiency: 76% / LogL: -6037
+Threads: 5 / Time: 3.199 sec / Speedup: 3.137 / Efficiency: 63% / LogL: -6037
+Threads: 6 / Time: 3.055 sec / Speedup: 3.285 / Efficiency: 55% / LogL: -6037
+Threads: 7 / Time: 3.041 sec / Speedup: 3.300 / Efficiency: 47% / LogL: -6037
+Determining AUTO threadcount: done in 32.2797 secs using 314% CPU
+BEST NUMBER OF THREADS: 6
+
+175  Q.insect+F+R3 4857.183     74  9862.366     9883.590     10187.492
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+93 trees examined
+Threads: 1 / Time: 10.101 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6322
+Threads: 2 / Time: 5.607 sec / Speedup: 1.802 / Efficiency: 90% / LogL: -6322
+Threads: 3 / Time: 4.405 sec / Speedup: 2.293 / Efficiency: 76% / LogL: -6322
+Threads: 4 / Time: 3.559 sec / Speedup: 2.838 / Efficiency: 71% / LogL: -6322
+Threads: 5 / Time: 3.088 sec / Speedup: 3.271 / Efficiency: 65% / LogL: -6322
+Threads: 6 / Time: 3.010 sec / Speedup: 3.356 / Efficiency: 56% / LogL: -6322
+Threads: 7 / Time: 2.902 sec / Speedup: 3.480 / Efficiency: 50% / LogL: -6322
+Determining AUTO threadcount: done in 32.6733 secs using 310.8% CPU
+BEST NUMBER OF THREADS: 5
+
+187  Q.plant+R2    4943.477     53  9992.954     10003.476    10225.814
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+59 trees examined
+Threads: 1 / Time: 10.175 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6455
+Threads: 2 / Time: 5.615 sec / Speedup: 1.812 / Efficiency: 91% / LogL: -6455
+Threads: 3 / Time: 4.006 sec / Speedup: 2.540 / Efficiency: 85% / LogL: -6455
+Threads: 4 / Time: 4.182 sec / Speedup: 2.433 / Efficiency: 61% / LogL: -6455
+Threads: 5 / Time: 3.567 sec / Speedup: 2.852 / Efficiency: 57% / LogL: -6455
+Threads: 6 / Time: 2.867 sec / Speedup: 3.550 / Efficiency: 59% / LogL: -6455
+Threads: 7 / Time: 2.526 sec / Speedup: 4.028 / Efficiency: 58% / LogL: -6455
+Threads: 8 / Time: 2.466 sec / Speedup: 4.127 / Efficiency: 52% / LogL: -6455
+Threads: 9 / Time: 3.017 sec / Speedup: 3.373 / Efficiency: 37% / LogL: -6455
+Determining AUTO threadcount: done in 38.4215 secs using 386.5% CPU
+BEST NUMBER OF THREADS: 7
+
+188  Q.plant+R3    4932.172     55  9974.344     9985.709     10215.992
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+95 trees examined
+Threads: 1 / Time: 10.066 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6182
+Threads: 2 / Time: 5.982 sec / Speedup: 1.683 / Efficiency: 84% / LogL: -6182
+Threads: 3 / Time: 5.229 sec / Speedup: 1.925 / Efficiency: 64% / LogL: -6182
+Threads: 4 / Time: 4.444 sec / Speedup: 2.265 / Efficiency: 57% / LogL: -6182
+Threads: 5 / Time: 3.134 sec / Speedup: 3.212 / Efficiency: 64% / LogL: -6182
+Threads: 6 / Time: 3.427 sec / Speedup: 2.937 / Efficiency: 49% / LogL: -6182
+Determining AUTO threadcount: done in 32.2847 secs using 281.2% CPU
+BEST NUMBER OF THREADS: 5
+
+200  Q.plant+F+R2  4892.553     72  9929.106     9949.128     10245.444
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+63 trees examined
+Threads: 1 / Time: 10.034 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6252
+Threads: 2 / Time: 5.540 sec / Speedup: 1.811 / Efficiency: 91% / LogL: -6252
+Threads: 3 / Time: 4.275 sec / Speedup: 2.347 / Efficiency: 78% / LogL: -6252
+Threads: 4 / Time: 4.121 sec / Speedup: 2.435 / Efficiency: 61% / LogL: -6252
+Threads: 5 / Time: 3.514 sec / Speedup: 2.856 / Efficiency: 57% / LogL: -6252
+Threads: 6 / Time: 2.790 sec / Speedup: 3.597 / Efficiency: 60% / LogL: -6252
+Threads: 7 / Time: 2.858 sec / Speedup: 3.511 / Efficiency: 50% / LogL: -6252
+Threads: 8 / Time: 3.043 sec / Speedup: 3.297 / Efficiency: 41% / LogL: -6252
+Determining AUTO threadcount: done in 36.1746 secs using 353.8% CPU
+BEST NUMBER OF THREADS: 6
+
+201  Q.plant+F+R3  4877.754     74  9903.508     9924.731     10228.633
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+95 trees examined
+Threads: 1 / Time: 10.085 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6286
+Threads: 2 / Time: 5.697 sec / Speedup: 1.770 / Efficiency: 89% / LogL: -6286
+Threads: 3 / Time: 4.103 sec / Speedup: 2.458 / Efficiency: 82% / LogL: -6286
+Threads: 4 / Time: 3.368 sec / Speedup: 2.994 / Efficiency: 75% / LogL: -6286
+Threads: 5 / Time: 3.066 sec / Speedup: 3.289 / Efficiency: 66% / LogL: -6286
+Threads: 6 / Time: 3.258 sec / Speedup: 3.096 / Efficiency: 52% / LogL: -6286
+Threads: 7 / Time: 3.412 sec / Speedup: 2.956 / Efficiency: 42% / LogL: -6286
+Determining AUTO threadcount: done in 32.9907 secs using 318.2% CPU
+BEST NUMBER OF THREADS: 5
+
+213  Q.yeast+R2    4931.716     53  9969.432     9979.954     10202.292
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+56 trees examined
+Threads: 1 / Time: 10.039 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6151
+Threads: 2 / Time: 5.256 sec / Speedup: 1.910 / Efficiency: 96% / LogL: -6151
+Threads: 3 / Time: 3.597 sec / Speedup: 2.791 / Efficiency: 93% / LogL: -6151
+Threads: 4 / Time: 2.951 sec / Speedup: 3.402 / Efficiency: 85% / LogL: -6151
+Threads: 5 / Time: 2.587 sec / Speedup: 3.881 / Efficiency: 78% / LogL: -6151
+Threads: 6 / Time: 2.975 sec / Speedup: 3.374 / Efficiency: 56% / LogL: -6151
+Determining AUTO threadcount: done in 27.4055 secs using 267.3% CPU
+BEST NUMBER OF THREADS: 5
+
+214  Q.yeast+R3    4922.090     55  9954.180     9965.545     10195.827
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+95 trees examined
+Threads: 1 / Time: 10.122 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -5988
+Threads: 2 / Time: 6.125 sec / Speedup: 1.653 / Efficiency: 83% / LogL: -5988
+Threads: 3 / Time: 5.086 sec / Speedup: 1.990 / Efficiency: 66% / LogL: -5988
+Threads: 4 / Time: 3.492 sec / Speedup: 2.899 / Efficiency: 72% / LogL: -5988
+Threads: 5 / Time: 3.968 sec / Speedup: 2.551 / Efficiency: 51% / LogL: -5988
+Determining AUTO threadcount: done in 28.7935 secs using 245.5% CPU
+BEST NUMBER OF THREADS: 4
+
+226  Q.yeast+F+R2  4856.998     72  9857.997     9878.020     10174.335
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+62 trees examined
+Threads: 1 / Time: 10.013 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -5966
+Threads: 2 / Time: 6.232 sec / Speedup: 1.607 / Efficiency: 80% / LogL: -5966
+Threads: 3 / Time: 4.491 sec / Speedup: 2.230 / Efficiency: 74% / LogL: -5966
+Threads: 4 / Time: 3.408 sec / Speedup: 2.938 / Efficiency: 73% / LogL: -5966
+Threads: 5 / Time: 3.660 sec / Speedup: 2.736 / Efficiency: 55% / LogL: -5966
+Threads: 6 / Time: 3.406 sec / Speedup: 2.939 / Efficiency: 49% / LogL: -5966
+Determining AUTO threadcount: done in 31.2122 secs using 280.7% CPU
+BEST NUMBER OF THREADS: 4
+
+227  Q.yeast+F+R3  4844.747     74  9837.493     9858.717     10162.619
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+101 trees examined
+Threads: 1 / Time: 10.052 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6303
+Threads: 2 / Time: 5.839 sec / Speedup: 1.722 / Efficiency: 86% / LogL: -6303
+Threads: 3 / Time: 4.274 sec / Speedup: 2.352 / Efficiency: 78% / LogL: -6303
+Threads: 4 / Time: 3.550 sec / Speedup: 2.832 / Efficiency: 71% / LogL: -6303
+Threads: 5 / Time: 3.723 sec / Speedup: 2.700 / Efficiency: 54% / LogL: -6303
+Threads: 6 / Time: 3.620 sec / Speedup: 2.777 / Efficiency: 46% / LogL: -6303
+Determining AUTO threadcount: done in 31.0596 secs using 283.7% CPU
+BEST NUMBER OF THREADS: 4
+
+239  JTTDCMut+R2   4971.659     53  10049.319    10059.841    10282.179
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+63 trees examined
+Threads: 1 / Time: 10.113 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6210
+Threads: 2 / Time: 5.716 sec / Speedup: 1.769 / Efficiency: 88% / LogL: -6210
+Threads: 3 / Time: 4.198 sec / Speedup: 2.409 / Efficiency: 80% / LogL: -6210
+Threads: 4 / Time: 3.482 sec / Speedup: 2.904 / Efficiency: 73% / LogL: -6210
+Threads: 5 / Time: 3.119 sec / Speedup: 3.243 / Efficiency: 65% / LogL: -6210
+Threads: 6 / Time: 3.381 sec / Speedup: 2.991 / Efficiency: 50% / LogL: -6210
+Determining AUTO threadcount: done in 30.0103 secs using 277.1% CPU
+BEST NUMBER OF THREADS: 5
+
+240  JTTDCMut+R3   4963.896     55  10037.791    10049.156    10279.439
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+94 trees examined
+Threads: 1 / Time: 10.075 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6100
+Threads: 2 / Time: 5.611 sec / Speedup: 1.796 / Efficiency: 90% / LogL: -6100
+Threads: 3 / Time: 5.093 sec / Speedup: 1.978 / Efficiency: 66% / LogL: -6100
+Threads: 4 / Time: 4.356 sec / Speedup: 2.313 / Efficiency: 58% / LogL: -6100
+Threads: 5 / Time: 3.846 sec / Speedup: 2.619 / Efficiency: 52% / LogL: -6100
+Threads: 6 / Time: 3.633 sec / Speedup: 2.773 / Efficiency: 46% / LogL: -6100
+Determining AUTO threadcount: done in 32.615 secs using 288.1% CPU
+BEST NUMBER OF THREADS: 5
+
+252  JTTDCMut+F+R2 4885.630     72  9915.260     9935.283     10231.599
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+60 trees examined
+Threads: 1 / Time: 10.032 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6462
+Threads: 2 / Time: 5.515 sec / Speedup: 1.819 / Efficiency: 91% / LogL: -6462
+Threads: 3 / Time: 4.570 sec / Speedup: 2.195 / Efficiency: 73% / LogL: -6462
+Threads: 4 / Time: 3.326 sec / Speedup: 3.016 / Efficiency: 75% / LogL: -6462
+Threads: 5 / Time: 2.930 sec / Speedup: 3.424 / Efficiency: 68% / LogL: -6462
+Threads: 6 / Time: 2.888 sec / Speedup: 3.474 / Efficiency: 58% / LogL: -6462
+Threads: 7 / Time: 3.490 sec / Speedup: 2.875 / Efficiency: 41% / LogL: -6462
+Determining AUTO threadcount: done in 32.7528 secs using 316.4% CPU
+BEST NUMBER OF THREADS: 5
+
+253  JTTDCMut+F+R3 4873.598     74  9895.195     9916.419     10220.321
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+94 trees examined
+Threads: 1 / Time: 10.009 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6449
+Threads: 2 / Time: 5.442 sec / Speedup: 1.839 / Efficiency: 92% / LogL: -6449
+Threads: 3 / Time: 4.516 sec / Speedup: 2.217 / Efficiency: 74% / LogL: -6449
+Threads: 4 / Time: 3.410 sec / Speedup: 2.935 / Efficiency: 73% / LogL: -6449
+Threads: 5 / Time: 3.000 sec / Speedup: 3.336 / Efficiency: 67% / LogL: -6449
+Threads: 6 / Time: 3.447 sec / Speedup: 2.903 / Efficiency: 48% / LogL: -6449
+Determining AUTO threadcount: done in 29.825 secs using 278.1% CPU
+BEST NUMBER OF THREADS: 5
+
+265  DCMut+R2      5076.314     53  10258.627    10269.149    10491.488
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+61 trees examined
+Threads: 1 / Time: 10.071 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6487
+Threads: 2 / Time: 5.721 sec / Speedup: 1.760 / Efficiency: 88% / LogL: -6487
+Threads: 3 / Time: 4.228 sec / Speedup: 2.382 / Efficiency: 79% / LogL: -6487
+Threads: 4 / Time: 3.254 sec / Speedup: 3.095 / Efficiency: 77% / LogL: -6487
+Threads: 5 / Time: 2.839 sec / Speedup: 3.547 / Efficiency: 71% / LogL: -6487
+Threads: 6 / Time: 2.627 sec / Speedup: 3.833 / Efficiency: 64% / LogL: -6487
+Threads: 7 / Time: 2.670 sec / Speedup: 3.772 / Efficiency: 54% / LogL: -6487
+Threads: 8 / Time: 2.608 sec / Speedup: 3.861 / Efficiency: 48% / LogL: -6487
+Determining AUTO threadcount: done in 34.0203 secs using 340.4% CPU
+BEST NUMBER OF THREADS: 6
+
+266  DCMut+R3      5065.146     55  10240.293    10251.658    10481.940
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+95 trees examined
+Threads: 1 / Time: 10.068 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6865
+Threads: 2 / Time: 5.845 sec / Speedup: 1.722 / Efficiency: 86% / LogL: -6865
+Threads: 3 / Time: 5.055 sec / Speedup: 1.992 / Efficiency: 66% / LogL: -6865
+Threads: 4 / Time: 3.539 sec / Speedup: 2.845 / Efficiency: 71% / LogL: -6865
+Threads: 5 / Time: 3.133 sec / Speedup: 3.214 / Efficiency: 64% / LogL: -6865
+Threads: 6 / Time: 2.820 sec / Speedup: 3.571 / Efficiency: 60% / LogL: -6865
+Threads: 7 / Time: 3.221 sec / Speedup: 3.126 / Efficiency: 45% / LogL: -6865
+Determining AUTO threadcount: done in 33.6828 secs using 312% CPU
+BEST NUMBER OF THREADS: 6
+
+278  DCMut+F+R2    4921.163     72  9986.326     10006.349    10302.665
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+60 trees examined
+Threads: 1 / Time: 10.016 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6568
+Threads: 2 / Time: 5.592 sec / Speedup: 1.791 / Efficiency: 90% / LogL: -6568
+Threads: 3 / Time: 5.172 sec / Speedup: 1.937 / Efficiency: 65% / LogL: -6568
+Threads: 4 / Time: 3.898 sec / Speedup: 2.570 / Efficiency: 64% / LogL: -6568
+Threads: 5 / Time: 3.566 sec / Speedup: 2.809 / Efficiency: 56% / LogL: -6568
+Threads: 6 / Time: 3.273 sec / Speedup: 3.060 / Efficiency: 51% / LogL: -6568
+Threads: 7 / Time: 3.011 sec / Speedup: 3.326 / Efficiency: 48% / LogL: -6568
+Determining AUTO threadcount: done in 34.5292 secs using 318.3% CPU
+BEST NUMBER OF THREADS: 6
+
+279  DCMut+F+R3    4906.928     74  9961.856     9983.080     10286.982
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+101 trees examined
+Threads: 1 / Time: 10.005 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6492
+Threads: 2 / Time: 5.824 sec / Speedup: 1.718 / Efficiency: 86% / LogL: -6492
+Threads: 3 / Time: 4.713 sec / Speedup: 2.123 / Efficiency: 71% / LogL: -6492
+Threads: 4 / Time: 3.516 sec / Speedup: 2.845 / Efficiency: 71% / LogL: -6492
+Threads: 5 / Time: 3.121 sec / Speedup: 3.205 / Efficiency: 64% / LogL: -6492
+Threads: 6 / Time: 2.880 sec / Speedup: 3.474 / Efficiency: 58% / LogL: -6492
+Threads: 7 / Time: 3.440 sec / Speedup: 2.909 / Efficiency: 42% / LogL: -6492
+Determining AUTO threadcount: done in 33.5012 secs using 315.9% CPU
+BEST NUMBER OF THREADS: 6
+
+291  VT+R2         4953.030     53  10012.061    10022.583    10244.921
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+61 trees examined
+Threads: 1 / Time: 10.030 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6027
+Threads: 2 / Time: 5.754 sec / Speedup: 1.743 / Efficiency: 87% / LogL: -6027
+Threads: 3 / Time: 4.400 sec / Speedup: 2.280 / Efficiency: 76% / LogL: -6027
+Threads: 4 / Time: 3.336 sec / Speedup: 3.006 / Efficiency: 75% / LogL: -6027
+Threads: 5 / Time: 2.957 sec / Speedup: 3.391 / Efficiency: 68% / LogL: -6027
+Threads: 6 / Time: 2.817 sec / Speedup: 3.561 / Efficiency: 59% / LogL: -6027
+Threads: 7 / Time: 2.954 sec / Speedup: 3.396 / Efficiency: 49% / LogL: -6027
+Determining AUTO threadcount: done in 32.2499 secs using 308.9% CPU
+BEST NUMBER OF THREADS: 5
+
+292  VT+R3         4948.151     55  10006.302    10017.667    10247.950
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+100 trees examined
+Threads: 1 / Time: 10.092 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -5819
+Threads: 2 / Time: 5.894 sec / Speedup: 1.712 / Efficiency: 86% / LogL: -5819
+Threads: 3 / Time: 4.797 sec / Speedup: 2.104 / Efficiency: 70% / LogL: -5819
+Threads: 4 / Time: 4.006 sec / Speedup: 2.519 / Efficiency: 63% / LogL: -5819
+Threads: 5 / Time: 3.091 sec / Speedup: 3.265 / Efficiency: 65% / LogL: -5819
+Threads: 6 / Time: 2.867 sec / Speedup: 3.520 / Efficiency: 59% / LogL: -5819
+Threads: 7 / Time: 3.110 sec / Speedup: 3.245 / Efficiency: 46% / LogL: -5819
+Determining AUTO threadcount: done in 33.8583 secs using 311.9% CPU
+BEST NUMBER OF THREADS: 6
+
+304  VT+F+R2       4876.965     72  9897.929     9917.952     10214.268
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+64 trees examined
+Threads: 1 / Time: 10.040 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6375
+Threads: 2 / Time: 5.508 sec / Speedup: 1.823 / Efficiency: 91% / LogL: -6375
+Threads: 3 / Time: 4.087 sec / Speedup: 2.457 / Efficiency: 82% / LogL: -6375
+Threads: 4 / Time: 3.576 sec / Speedup: 2.808 / Efficiency: 70% / LogL: -6375
+Threads: 5 / Time: 3.165 sec / Speedup: 3.173 / Efficiency: 63% / LogL: -6375
+Threads: 6 / Time: 3.167 sec / Speedup: 3.170 / Efficiency: 53% / LogL: -6375
+Threads: 7 / Time: 2.986 sec / Speedup: 3.363 / Efficiency: 48% / LogL: -6375
+Determining AUTO threadcount: done in 32.5307 secs using 315% CPU
+BEST NUMBER OF THREADS: 5
+
+305  VT+F+R3       4869.751     74  9887.502     9908.726     10212.628
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+97 trees examined
+Threads: 1 / Time: 10.021 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6201
+Threads: 2 / Time: 6.780 sec / Speedup: 1.478 / Efficiency: 74% / LogL: -6201
+Threads: 3 / Time: 4.406 sec / Speedup: 2.275 / Efficiency: 76% / LogL: -6201
+Threads: 4 / Time: 3.982 sec / Speedup: 2.516 / Efficiency: 63% / LogL: -6201
+Threads: 5 / Time: 3.049 sec / Speedup: 3.287 / Efficiency: 66% / LogL: -6201
+Threads: 6 / Time: 3.370 sec / Speedup: 2.973 / Efficiency: 50% / LogL: -6201
+Determining AUTO threadcount: done in 31.6096 secs using 276.1% CPU
+BEST NUMBER OF THREADS: 5
+
+317  PMB+R2        4966.384     53  10038.767    10049.290    10271.628
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+65 trees examined
+Threads: 1 / Time: 10.036 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6026
+Threads: 2 / Time: 5.443 sec / Speedup: 1.844 / Efficiency: 92% / LogL: -6026
+Threads: 3 / Time: 4.733 sec / Speedup: 2.120 / Efficiency: 71% / LogL: -6026
+Threads: 4 / Time: 3.348 sec / Speedup: 2.998 / Efficiency: 75% / LogL: -6026
+Threads: 5 / Time: 3.205 sec / Speedup: 3.131 / Efficiency: 63% / LogL: -6026
+Threads: 6 / Time: 3.272 sec / Speedup: 3.067 / Efficiency: 51% / LogL: -6026
+Threads: 7 / Time: 3.042 sec / Speedup: 3.299 / Efficiency: 47% / LogL: -6026
+Determining AUTO threadcount: done in 33.0797 secs using 316.1% CPU
+BEST NUMBER OF THREADS: 4
+
+318  PMB+R3        4961.687     55  10033.375    10044.740    10275.022
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+94 trees examined
+Threads: 1 / Time: 10.029 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -5892
+Threads: 2 / Time: 5.287 sec / Speedup: 1.897 / Efficiency: 95% / LogL: -5892
+Threads: 3 / Time: 4.126 sec / Speedup: 2.431 / Efficiency: 81% / LogL: -5892
+Threads: 4 / Time: 3.659 sec / Speedup: 2.741 / Efficiency: 69% / LogL: -5892
+Threads: 5 / Time: 3.124 sec / Speedup: 3.210 / Efficiency: 64% / LogL: -5892
+Threads: 6 / Time: 3.299 sec / Speedup: 3.040 / Efficiency: 51% / LogL: -5892
+Threads: 7 / Time: 3.557 sec / Speedup: 2.819 / Efficiency: 40% / LogL: -5892
+Determining AUTO threadcount: done in 33.0818 secs using 322.9% CPU
+BEST NUMBER OF THREADS: 5
+
+330  PMB+F+R2      4896.090     72  9936.181     9956.204     10252.519
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+60 trees examined
+Threads: 1 / Time: 10.094 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6149
+Threads: 2 / Time: 5.470 sec / Speedup: 1.845 / Efficiency: 92% / LogL: -6149
+Threads: 3 / Time: 3.995 sec / Speedup: 2.526 / Efficiency: 84% / LogL: -6149
+Threads: 4 / Time: 3.228 sec / Speedup: 3.127 / Efficiency: 78% / LogL: -6149
+Threads: 5 / Time: 2.905 sec / Speedup: 3.475 / Efficiency: 69% / LogL: -6149
+Threads: 6 / Time: 2.580 sec / Speedup: 3.912 / Efficiency: 65% / LogL: -6149
+Threads: 7 / Time: 3.006 sec / Speedup: 3.358 / Efficiency: 48% / LogL: -6149
+Determining AUTO threadcount: done in 31.2787 secs using 307.3% CPU
+BEST NUMBER OF THREADS: 6
+
+331  PMB+F+R3      4889.149     74  9926.298     9947.522     10251.424
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+96 trees examined
+Threads: 1 / Time: 10.029 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6260
+Threads: 2 / Time: 5.799 sec / Speedup: 1.729 / Efficiency: 86% / LogL: -6260
+Threads: 3 / Time: 4.210 sec / Speedup: 2.382 / Efficiency: 79% / LogL: -6260
+Threads: 4 / Time: 3.764 sec / Speedup: 2.664 / Efficiency: 67% / LogL: -6260
+Threads: 5 / Time: 3.136 sec / Speedup: 3.198 / Efficiency: 64% / LogL: -6260
+Threads: 6 / Time: 2.796 sec / Speedup: 3.587 / Efficiency: 60% / LogL: -6260
+Threads: 7 / Time: 3.177 sec / Speedup: 3.157 / Efficiency: 45% / LogL: -6260
+Determining AUTO threadcount: done in 32.9123 secs using 312.9% CPU
+BEST NUMBER OF THREADS: 6
+
+343  Blosum62+R2   4937.191     53  9980.382     9990.905     10213.243
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+65 trees examined
+Threads: 1 / Time: 10.068 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6526
+Threads: 2 / Time: 5.679 sec / Speedup: 1.773 / Efficiency: 89% / LogL: -6526
+Threads: 3 / Time: 4.162 sec / Speedup: 2.419 / Efficiency: 81% / LogL: -6526
+Threads: 4 / Time: 3.851 sec / Speedup: 2.614 / Efficiency: 65% / LogL: -6526
+Threads: 5 / Time: 3.245 sec / Speedup: 3.102 / Efficiency: 62% / LogL: -6526
+Threads: 6 / Time: 2.684 sec / Speedup: 3.751 / Efficiency: 63% / LogL: -6526
+Threads: 7 / Time: 2.950 sec / Speedup: 3.413 / Efficiency: 49% / LogL: -6526
+Determining AUTO threadcount: done in 32.6397 secs using 310.6% CPU
+BEST NUMBER OF THREADS: 6
+
+344  Blosum62+R3   4932.268     55  9974.536     9985.902     10216.184
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+99 trees examined
+Threads: 1 / Time: 10.059 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -5837
+Threads: 2 / Time: 6.033 sec / Speedup: 1.667 / Efficiency: 83% / LogL: -5837
+Threads: 3 / Time: 4.826 sec / Speedup: 2.084 / Efficiency: 69% / LogL: -5837
+Threads: 4 / Time: 4.308 sec / Speedup: 2.335 / Efficiency: 58% / LogL: -5837
+Threads: 5 / Time: 3.510 sec / Speedup: 2.866 / Efficiency: 57% / LogL: -5837
+Threads: 6 / Time: 3.282 sec / Speedup: 3.065 / Efficiency: 51% / LogL: -5837
+Threads: 7 / Time: 2.889 sec / Speedup: 3.482 / Efficiency: 50% / LogL: -5837
+Determining AUTO threadcount: done in 34.9081 secs using 315.7% CPU
+BEST NUMBER OF THREADS: 6
+
+356  Blosum62+F+R2 4882.931     72  9909.862     9929.885     10226.201
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+62 trees examined
+Threads: 1 / Time: 10.036 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6132
+Threads: 2 / Time: 6.082 sec / Speedup: 1.650 / Efficiency: 83% / LogL: -6132
+Threads: 3 / Time: 4.148 sec / Speedup: 2.420 / Efficiency: 81% / LogL: -6132
+Threads: 4 / Time: 3.798 sec / Speedup: 2.643 / Efficiency: 66% / LogL: -6132
+Threads: 5 / Time: 3.157 sec / Speedup: 3.179 / Efficiency: 64% / LogL: -6132
+Threads: 6 / Time: 2.612 sec / Speedup: 3.843 / Efficiency: 64% / LogL: -6132
+Threads: 7 / Time: 2.752 sec / Speedup: 3.647 / Efficiency: 52% / LogL: -6132
+Threads: 8 / Time: 2.960 sec / Speedup: 3.391 / Efficiency: 42% / LogL: -6132
+Determining AUTO threadcount: done in 35.5447 secs using 346.7% CPU
+BEST NUMBER OF THREADS: 6
+
+357  Blosum62+F+R3 4876.508     74  9901.016     9922.240     10226.142
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+97 trees examined
+Threads: 1 / Time: 10.081 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6026
+Threads: 2 / Time: 5.815 sec / Speedup: 1.734 / Efficiency: 87% / LogL: -6026
+Threads: 3 / Time: 4.426 sec / Speedup: 2.278 / Efficiency: 76% / LogL: -6026
+Threads: 4 / Time: 4.515 sec / Speedup: 2.233 / Efficiency: 56% / LogL: -6026
+Threads: 5 / Time: 4.152 sec / Speedup: 2.428 / Efficiency: 49% / LogL: -6026
+Determining AUTO threadcount: done in 28.9893 secs using 251.8% CPU
+BEST NUMBER OF THREADS: 3
+
+369  Dayhoff+R2    5075.858     53  10257.716    10268.238    10490.576
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+62 trees examined
+Threads: 1 / Time: 10.099 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6807
+Threads: 2 / Time: 5.660 sec / Speedup: 1.784 / Efficiency: 89% / LogL: -6807
+Threads: 3 / Time: 4.224 sec / Speedup: 2.391 / Efficiency: 80% / LogL: -6807
+Threads: 4 / Time: 3.761 sec / Speedup: 2.686 / Efficiency: 67% / LogL: -6807
+Threads: 5 / Time: 3.160 sec / Speedup: 3.196 / Efficiency: 64% / LogL: -6807
+Threads: 6 / Time: 3.270 sec / Speedup: 3.088 / Efficiency: 51% / LogL: -6807
+Threads: 7 / Time: 2.951 sec / Speedup: 3.423 / Efficiency: 49% / LogL: -6807
+Determining AUTO threadcount: done in 33.1258 secs using 314.8% CPU
+BEST NUMBER OF THREADS: 5
+
+370  Dayhoff+R3    5064.685     55  10239.370    10250.736    10481.018
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+94 trees examined
+Threads: 1 / Time: 10.023 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -5975
+Threads: 2 / Time: 5.554 sec / Speedup: 1.805 / Efficiency: 90% / LogL: -5975
+Threads: 3 / Time: 4.294 sec / Speedup: 2.334 / Efficiency: 78% / LogL: -5975
+Threads: 4 / Time: 3.711 sec / Speedup: 2.701 / Efficiency: 68% / LogL: -5975
+Threads: 5 / Time: 3.890 sec / Speedup: 2.577 / Efficiency: 52% / LogL: -5975
+Threads: 6 / Time: 3.725 sec / Speedup: 2.691 / Efficiency: 45% / LogL: -5975
+Determining AUTO threadcount: done in 31.199 secs using 287.6% CPU
+BEST NUMBER OF THREADS: 4
+
+382  Dayhoff+F+R2  4920.673     72  9985.346     10005.369    10301.684
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+58 trees examined
+Threads: 1 / Time: 10.013 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6027
+Threads: 2 / Time: 5.562 sec / Speedup: 1.800 / Efficiency: 90% / LogL: -6027
+Threads: 3 / Time: 4.613 sec / Speedup: 2.171 / Efficiency: 72% / LogL: -6027
+Threads: 4 / Time: 4.192 sec / Speedup: 2.389 / Efficiency: 60% / LogL: -6027
+Threads: 5 / Time: 3.982 sec / Speedup: 2.515 / Efficiency: 50% / LogL: -6027
+Threads: 6 / Time: 3.949 sec / Speedup: 2.536 / Efficiency: 42% / LogL: -6027
+Determining AUTO threadcount: done in 32.3107 secs using 292.5% CPU
+BEST NUMBER OF THREADS: 5
+
+383  Dayhoff+F+R3  4906.468     74  9960.936     9982.159     10286.061
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+97 trees examined
+Threads: 1 / Time: 10.108 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -7066
+Threads: 2 / Time: 5.941 sec / Speedup: 1.701 / Efficiency: 85% / LogL: -7066
+Threads: 3 / Time: 4.364 sec / Speedup: 2.316 / Efficiency: 77% / LogL: -7066
+Threads: 4 / Time: 3.757 sec / Speedup: 2.690 / Efficiency: 67% / LogL: -7066
+Threads: 5 / Time: 4.292 sec / Speedup: 2.355 / Efficiency: 47% / LogL: -7066
+Determining AUTO threadcount: done in 28.4625 secs using 248.9% CPU
+BEST NUMBER OF THREADS: 4
+
+395  mtREV+R2      5105.400     53  10316.800    10327.322    10549.660
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+63 trees examined
+Threads: 1 / Time: 10.051 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6523
+Threads: 2 / Time: 5.309 sec / Speedup: 1.893 / Efficiency: 95% / LogL: -6523
+Threads: 3 / Time: 3.913 sec / Speedup: 2.568 / Efficiency: 86% / LogL: -6523
+Threads: 4 / Time: 3.214 sec / Speedup: 3.127 / Efficiency: 78% / LogL: -6523
+Threads: 5 / Time: 2.815 sec / Speedup: 3.571 / Efficiency: 71% / LogL: -6523
+Threads: 6 / Time: 2.521 sec / Speedup: 3.986 / Efficiency: 66% / LogL: -6523
+Threads: 7 / Time: 2.355 sec / Speedup: 4.267 / Efficiency: 61% / LogL: -6523
+Threads: 8 / Time: 2.993 sec / Speedup: 3.358 / Efficiency: 42% / LogL: -6523
+Determining AUTO threadcount: done in 33.1733 secs using 343.5% CPU
+BEST NUMBER OF THREADS: 7
+
+396  mtREV+R3      5086.202     55  10282.403    10293.769    10524.051
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+95 trees examined
+Threads: 1 / Time: 10.072 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6586
+Threads: 2 / Time: 6.084 sec / Speedup: 1.656 / Efficiency: 83% / LogL: -6586
+Threads: 3 / Time: 5.601 sec / Speedup: 1.798 / Efficiency: 60% / LogL: -6586
+Threads: 4 / Time: 3.992 sec / Speedup: 2.523 / Efficiency: 63% / LogL: -6586
+Threads: 5 / Time: 3.552 sec / Speedup: 2.835 / Efficiency: 57% / LogL: -6586
+Threads: 6 / Time: 2.897 sec / Speedup: 3.476 / Efficiency: 58% / LogL: -6586
+Threads: 7 / Time: 3.585 sec / Speedup: 2.809 / Efficiency: 40% / LogL: -6586
+Determining AUTO threadcount: done in 35.7828 secs using 318.7% CPU
+BEST NUMBER OF THREADS: 6
+
+408  mtREV+F+R2    4959.799     72  10063.599    10083.622    10379.937
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+61 trees examined
+Threads: 1 / Time: 10.072 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6705
+Threads: 2 / Time: 5.277 sec / Speedup: 1.909 / Efficiency: 95% / LogL: -6705
+Threads: 3 / Time: 3.816 sec / Speedup: 2.639 / Efficiency: 88% / LogL: -6705
+Threads: 4 / Time: 3.239 sec / Speedup: 3.110 / Efficiency: 78% / LogL: -6705
+Threads: 5 / Time: 3.502 sec / Speedup: 2.876 / Efficiency: 58% / LogL: -6705
+Threads: 6 / Time: 2.826 sec / Speedup: 3.564 / Efficiency: 59% / LogL: -6705
+Threads: 7 / Time: 2.651 sec / Speedup: 3.800 / Efficiency: 54% / LogL: -6705
+Threads: 8 / Time: 2.709 sec / Speedup: 3.718 / Efficiency: 46% / LogL: -6705
+Determining AUTO threadcount: done in 34.0944 secs using 348.3% CPU
+BEST NUMBER OF THREADS: 7
+
+409  mtREV+F+R3    4943.607     74  10035.214    10056.438    10360.340
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+87 trees examined
+Threads: 1 / Time: 10.025 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -7011
+Threads: 2 / Time: 6.891 sec / Speedup: 1.455 / Efficiency: 73% / LogL: -7011
+Threads: 3 / Time: 4.286 sec / Speedup: 2.339 / Efficiency: 78% / LogL: -7011
+Threads: 4 / Time: 3.670 sec / Speedup: 2.732 / Efficiency: 68% / LogL: -7011
+Threads: 5 / Time: 3.129 sec / Speedup: 3.203 / Efficiency: 64% / LogL: -7011
+Threads: 6 / Time: 3.724 sec / Speedup: 2.692 / Efficiency: 45% / LogL: -7011
+Determining AUTO threadcount: done in 31.7262 secs using 278.6% CPU
+BEST NUMBER OF THREADS: 5
+
+421  mtART+R2      5076.972     53  10259.944    10270.466    10492.805
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+54 trees examined
+Threads: 1 / Time: 10.072 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6592
+Threads: 2 / Time: 5.725 sec / Speedup: 1.759 / Efficiency: 88% / LogL: -6592
+Threads: 3 / Time: 3.756 sec / Speedup: 2.682 / Efficiency: 89% / LogL: -6592
+Threads: 4 / Time: 3.001 sec / Speedup: 3.356 / Efficiency: 84% / LogL: -6592
+Threads: 5 / Time: 2.729 sec / Speedup: 3.692 / Efficiency: 74% / LogL: -6592
+Threads: 6 / Time: 2.806 sec / Speedup: 3.589 / Efficiency: 60% / LogL: -6592
+Threads: 7 / Time: 2.715 sec / Speedup: 3.709 / Efficiency: 53% / LogL: -6592
+Threads: 8 / Time: 2.649 sec / Speedup: 3.803 / Efficiency: 48% / LogL: -6592
+Determining AUTO threadcount: done in 33.4546 secs using 342.1% CPU
+BEST NUMBER OF THREADS: 5
+
+422  mtART+R3      5055.497     55  10220.994    10232.359    10462.642
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+90 trees examined
+Threads: 1 / Time: 10.035 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6294
+Threads: 2 / Time: 5.671 sec / Speedup: 1.770 / Efficiency: 88% / LogL: -6294
+Threads: 3 / Time: 4.462 sec / Speedup: 2.249 / Efficiency: 75% / LogL: -6294
+Threads: 4 / Time: 4.322 sec / Speedup: 2.322 / Efficiency: 58% / LogL: -6294
+Threads: 5 / Time: 4.057 sec / Speedup: 2.473 / Efficiency: 49% / LogL: -6294
+Determining AUTO threadcount: done in 28.5476 secs using 250.9% CPU
+BEST NUMBER OF THREADS: 3
+
+434  mtART+F+R2    4976.748     72  10097.496    10117.519    10413.834
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+62 trees examined
+Threads: 1 / Time: 10.074 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6084
+Threads: 2 / Time: 6.945 sec / Speedup: 1.451 / Efficiency: 73% / LogL: -6084
+Threads: 3 / Time: 4.891 sec / Speedup: 2.060 / Efficiency: 69% / LogL: -6084
+Threads: 4 / Time: 3.716 sec / Speedup: 2.711 / Efficiency: 68% / LogL: -6084
+Threads: 5 / Time: 3.201 sec / Speedup: 3.147 / Efficiency: 63% / LogL: -6084
+Threads: 6 / Time: 3.677 sec / Speedup: 2.739 / Efficiency: 46% / LogL: -6084
+Determining AUTO threadcount: done in 32.5058 secs using 279.1% CPU
+BEST NUMBER OF THREADS: 5
+
+435  mtART+F+R3    4957.246     74  10062.491    10083.715    10387.617
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+93 trees examined
+Threads: 1 / Time: 10.088 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6333
+Threads: 2 / Time: 6.591 sec / Speedup: 1.531 / Efficiency: 77% / LogL: -6333
+Threads: 3 / Time: 4.703 sec / Speedup: 2.145 / Efficiency: 72% / LogL: -6333
+Threads: 4 / Time: 3.555 sec / Speedup: 2.838 / Efficiency: 71% / LogL: -6333
+Threads: 5 / Time: 3.066 sec / Speedup: 3.291 / Efficiency: 66% / LogL: -6333
+Threads: 6 / Time: 3.186 sec / Speedup: 3.166 / Efficiency: 53% / LogL: -6333
+Threads: 7 / Time: 3.249 sec / Speedup: 3.105 / Efficiency: 44% / LogL: -6333
+Determining AUTO threadcount: done in 34.4379 secs using 312.7% CPU
+BEST NUMBER OF THREADS: 5
+
+447  mtZOA+R2      4998.654     53  10103.307    10113.829    10336.167
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+62 trees examined
+Threads: 1 / Time: 10.035 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6270
+Threads: 2 / Time: 5.648 sec / Speedup: 1.777 / Efficiency: 89% / LogL: -6270
+Threads: 3 / Time: 3.984 sec / Speedup: 2.519 / Efficiency: 84% / LogL: -6270
+Threads: 4 / Time: 3.356 sec / Speedup: 2.990 / Efficiency: 75% / LogL: -6270
+Threads: 5 / Time: 2.771 sec / Speedup: 3.622 / Efficiency: 72% / LogL: -6270
+Threads: 6 / Time: 2.784 sec / Speedup: 3.605 / Efficiency: 60% / LogL: -6270
+Threads: 7 / Time: 2.797 sec / Speedup: 3.588 / Efficiency: 51% / LogL: -6270
+Threads: 8 / Time: 3.039 sec / Speedup: 3.302 / Efficiency: 41% / LogL: -6270
+Determining AUTO threadcount: done in 34.4133 secs using 349.1% CPU
+BEST NUMBER OF THREADS: 5
+
+448  mtZOA+R3      4981.157     55  10072.313    10083.678    10313.961
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+93 trees examined
+Threads: 1 / Time: 10.101 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6646
+Threads: 2 / Time: 6.114 sec / Speedup: 1.652 / Efficiency: 83% / LogL: -6646
+Threads: 3 / Time: 4.856 sec / Speedup: 2.080 / Efficiency: 69% / LogL: -6646
+Threads: 4 / Time: 3.482 sec / Speedup: 2.901 / Efficiency: 73% / LogL: -6646
+Threads: 5 / Time: 3.762 sec / Speedup: 2.685 / Efficiency: 54% / LogL: -6646
+Threads: 6 / Time: 2.780 sec / Speedup: 3.634 / Efficiency: 61% / LogL: -6646
+Threads: 7 / Time: 3.299 sec / Speedup: 3.062 / Efficiency: 44% / LogL: -6646
+Determining AUTO threadcount: done in 34.3945 secs using 314.8% CPU
+BEST NUMBER OF THREADS: 6
+
+460  mtZOA+F+R2    4910.882     72  9965.764     9985.787     10282.103
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+63 trees examined
+Threads: 1 / Time: 10.033 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6209
+Threads: 2 / Time: 5.596 sec / Speedup: 1.793 / Efficiency: 90% / LogL: -6209
+Threads: 3 / Time: 4.190 sec / Speedup: 2.395 / Efficiency: 80% / LogL: -6209
+Threads: 4 / Time: 3.369 sec / Speedup: 2.978 / Efficiency: 74% / LogL: -6209
+Threads: 5 / Time: 3.404 sec / Speedup: 2.948 / Efficiency: 59% / LogL: -6209
+Threads: 6 / Time: 3.153 sec / Speedup: 3.182 / Efficiency: 53% / LogL: -6209
+Threads: 7 / Time: 3.194 sec / Speedup: 3.142 / Efficiency: 45% / LogL: -6209
+Determining AUTO threadcount: done in 32.9407 secs using 317.7% CPU
+BEST NUMBER OF THREADS: 6
+
+461  mtZOA+F+R3    4894.864     74  9937.728     9958.951     10262.853
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+96 trees examined
+Threads: 1 / Time: 10.073 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -7077
+Threads: 2 / Time: 7.281 sec / Speedup: 1.383 / Efficiency: 69% / LogL: -7077
+Threads: 3 / Time: 5.573 sec / Speedup: 1.808 / Efficiency: 60% / LogL: -7077
+Threads: 4 / Time: 4.601 sec / Speedup: 2.189 / Efficiency: 55% / LogL: -7077
+Threads: 5 / Time: 4.362 sec / Speedup: 2.309 / Efficiency: 46% / LogL: -7077
+Determining AUTO threadcount: done in 31.8908 secs using 253% CPU
+BEST NUMBER OF THREADS: 4
+
+473  mtMet+R2      5049.458     53  10204.916    10215.438    10437.776
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+61 trees examined
+Threads: 1 / Time: 10.116 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6749
+Threads: 2 / Time: 5.463 sec / Speedup: 1.852 / Efficiency: 93% / LogL: -6749
+Threads: 3 / Time: 4.048 sec / Speedup: 2.499 / Efficiency: 83% / LogL: -6749
+Threads: 4 / Time: 4.336 sec / Speedup: 2.333 / Efficiency: 58% / LogL: -6749
+Threads: 5 / Time: 3.640 sec / Speedup: 2.779 / Efficiency: 56% / LogL: -6749
+Threads: 6 / Time: 3.079 sec / Speedup: 3.286 / Efficiency: 55% / LogL: -6749
+Threads: 7 / Time: 2.776 sec / Speedup: 3.644 / Efficiency: 52% / LogL: -6749
+Threads: 8 / Time: 2.792 sec / Speedup: 3.624 / Efficiency: 45% / LogL: -6749
+Determining AUTO threadcount: done in 36.2502 secs using 352.9% CPU
+BEST NUMBER OF THREADS: 7
+
+474  mtMet+R3      5031.735     55  10173.470    10184.835    10415.118
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+101 trees examined
+Threads: 1 / Time: 10.084 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6418
+Threads: 2 / Time: 5.788 sec / Speedup: 1.742 / Efficiency: 87% / LogL: -6418
+Threads: 3 / Time: 4.853 sec / Speedup: 2.078 / Efficiency: 69% / LogL: -6418
+Threads: 4 / Time: 3.845 sec / Speedup: 2.623 / Efficiency: 66% / LogL: -6418
+Threads: 5 / Time: 3.273 sec / Speedup: 3.081 / Efficiency: 62% / LogL: -6418
+Threads: 6 / Time: 3.259 sec / Speedup: 3.094 / Efficiency: 52% / LogL: -6418
+Threads: 7 / Time: 3.299 sec / Speedup: 3.056 / Efficiency: 44% / LogL: -6418
+Determining AUTO threadcount: done in 34.4005 secs using 318.3% CPU
+BEST NUMBER OF THREADS: 5
+
+486  mtMet+F+R2    4936.585     72  10017.170    10037.193    10333.509
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+63 trees examined
+Threads: 1 / Time: 10.014 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6030
+Threads: 2 / Time: 5.488 sec / Speedup: 1.825 / Efficiency: 91% / LogL: -6030
+Threads: 3 / Time: 4.979 sec / Speedup: 2.011 / Efficiency: 67% / LogL: -6030
+Threads: 4 / Time: 4.610 sec / Speedup: 2.172 / Efficiency: 54% / LogL: -6030
+Threads: 5 / Time: 2.881 sec / Speedup: 3.476 / Efficiency: 70% / LogL: -6030
+Threads: 6 / Time: 3.125 sec / Speedup: 3.205 / Efficiency: 53% / LogL: -6030
+Threads: 7 / Time: 2.885 sec / Speedup: 3.471 / Efficiency: 50% / LogL: -6030
+Determining AUTO threadcount: done in 33.9826 secs using 314.3% CPU
+BEST NUMBER OF THREADS: 5
+
+487  mtMet+F+R3    4919.802     74  9987.604     10008.828    10312.730
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+91 trees examined
+Threads: 1 / Time: 10.014 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6542
+Threads: 2 / Time: 5.489 sec / Speedup: 1.824 / Efficiency: 91% / LogL: -6542
+Threads: 3 / Time: 5.385 sec / Speedup: 1.859 / Efficiency: 62% / LogL: -6542
+Threads: 4 / Time: 4.348 sec / Speedup: 2.303 / Efficiency: 58% / LogL: -6542
+Threads: 5 / Time: 3.817 sec / Speedup: 2.623 / Efficiency: 52% / LogL: -6542
+Threads: 6 / Time: 3.911 sec / Speedup: 2.560 / Efficiency: 43% / LogL: -6542
+Determining AUTO threadcount: done in 32.9659 secs using 291.3% CPU
+BEST NUMBER OF THREADS: 5
+
+499  mtVer+R2      5145.886     53  10397.772    10408.294    10630.632
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+64 trees examined
+Threads: 1 / Time: 10.154 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6708
+Threads: 2 / Time: 5.760 sec / Speedup: 1.763 / Efficiency: 88% / LogL: -6708
+Threads: 3 / Time: 4.474 sec / Speedup: 2.270 / Efficiency: 76% / LogL: -6708
+Threads: 4 / Time: 3.572 sec / Speedup: 2.843 / Efficiency: 71% / LogL: -6708
+Threads: 5 / Time: 3.015 sec / Speedup: 3.368 / Efficiency: 67% / LogL: -6708
+Threads: 6 / Time: 3.123 sec / Speedup: 3.252 / Efficiency: 54% / LogL: -6708
+Threads: 7 / Time: 2.726 sec / Speedup: 3.725 / Efficiency: 53% / LogL: -6708
+Threads: 8 / Time: 2.948 sec / Speedup: 3.445 / Efficiency: 43% / LogL: -6708
+Determining AUTO threadcount: done in 35.7723 secs using 348.8% CPU
+BEST NUMBER OF THREADS: 7
+
+500  mtVer+R3      5127.257     55  10364.514    10375.879    10606.161
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+95 trees examined
+Threads: 1 / Time: 10.012 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6973
+Threads: 2 / Time: 6.253 sec / Speedup: 1.601 / Efficiency: 80% / LogL: -6973
+Threads: 3 / Time: 4.271 sec / Speedup: 2.344 / Efficiency: 78% / LogL: -6973
+Threads: 4 / Time: 3.543 sec / Speedup: 2.826 / Efficiency: 71% / LogL: -6973
+Threads: 5 / Time: 3.620 sec / Speedup: 2.766 / Efficiency: 55% / LogL: -6973
+Threads: 6 / Time: 3.147 sec / Speedup: 3.181 / Efficiency: 53% / LogL: -6973
+Threads: 7 / Time: 3.099 sec / Speedup: 3.230 / Efficiency: 46% / LogL: -6973
+Determining AUTO threadcount: done in 33.9465 secs using 315.3% CPU
+BEST NUMBER OF THREADS: 6
+
+512  mtVer+F+R2    4988.696     72  10121.392    10141.415    10437.731
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+66 trees examined
+Threads: 1 / Time: 10.126 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6597
+Threads: 2 / Time: 6.099 sec / Speedup: 1.660 / Efficiency: 83% / LogL: -6597
+Threads: 3 / Time: 4.808 sec / Speedup: 2.106 / Efficiency: 70% / LogL: -6597
+Threads: 4 / Time: 3.293 sec / Speedup: 3.075 / Efficiency: 77% / LogL: -6597
+Threads: 5 / Time: 3.153 sec / Speedup: 3.212 / Efficiency: 64% / LogL: -6597
+Threads: 6 / Time: 3.202 sec / Speedup: 3.163 / Efficiency: 53% / LogL: -6597
+Threads: 7 / Time: 3.073 sec / Speedup: 3.295 / Efficiency: 47% / LogL: -6597
+Determining AUTO threadcount: done in 33.7549 secs using 312.5% CPU
+BEST NUMBER OF THREADS: 4
+
+513  mtVer+F+R3    4972.188     74  10092.376    10113.599    10417.501
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+100 trees examined
+Threads: 1 / Time: 10.019 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6344
+Threads: 2 / Time: 6.366 sec / Speedup: 1.574 / Efficiency: 79% / LogL: -6344
+Threads: 3 / Time: 4.903 sec / Speedup: 2.043 / Efficiency: 68% / LogL: -6344
+Threads: 4 / Time: 3.610 sec / Speedup: 2.776 / Efficiency: 69% / LogL: -6344
+Threads: 5 / Time: 3.635 sec / Speedup: 2.756 / Efficiency: 55% / LogL: -6344
+Threads: 6 / Time: 3.747 sec / Speedup: 2.674 / Efficiency: 45% / LogL: -6344
+Determining AUTO threadcount: done in 32.2811 secs using 283.8% CPU
+BEST NUMBER OF THREADS: 4
+
+525  mtInv+R2      5056.990     53  10219.980    10230.502    10452.840
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+63 trees examined
+Threads: 1 / Time: 10.082 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -5905
+Threads: 2 / Time: 5.821 sec / Speedup: 1.732 / Efficiency: 87% / LogL: -5905
+Threads: 3 / Time: 4.056 sec / Speedup: 2.485 / Efficiency: 83% / LogL: -5905
+Threads: 4 / Time: 3.325 sec / Speedup: 3.032 / Efficiency: 76% / LogL: -5905
+Threads: 5 / Time: 2.872 sec / Speedup: 3.510 / Efficiency: 70% / LogL: -5905
+Threads: 6 / Time: 3.128 sec / Speedup: 3.223 / Efficiency: 54% / LogL: -5905
+Threads: 7 / Time: 2.666 sec / Speedup: 3.782 / Efficiency: 54% / LogL: -5905
+Threads: 8 / Time: 2.288 sec / Speedup: 4.407 / Efficiency: 55% / LogL: -5905
+Threads: 9 / Time: 2.404 sec / Speedup: 4.194 / Efficiency: 47% / LogL: -5905
+Determining AUTO threadcount: done in 36.6429 secs using 376.2% CPU
+BEST NUMBER OF THREADS: 8
+
+526  mtInv+R3      5039.814     55  10189.629    10200.994    10431.276
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+98 trees examined
+Threads: 1 / Time: 10.103 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -5815
+Threads: 2 / Time: 7.278 sec / Speedup: 1.388 / Efficiency: 69% / LogL: -5815
+Threads: 3 / Time: 4.132 sec / Speedup: 2.445 / Efficiency: 82% / LogL: -5815
+Threads: 4 / Time: 3.714 sec / Speedup: 2.721 / Efficiency: 68% / LogL: -5815
+Threads: 5 / Time: 4.153 sec / Speedup: 2.433 / Efficiency: 49% / LogL: -5815
+Determining AUTO threadcount: done in 29.38 secs using 244.8% CPU
+BEST NUMBER OF THREADS: 4
+
+538  mtInv+F+R2    4911.766     72  9967.531     9987.554     10283.870
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+62 trees examined
+Threads: 1 / Time: 10.252 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6850
+Threads: 2 / Time: 6.665 sec / Speedup: 1.538 / Efficiency: 77% / LogL: -6850
+Threads: 3 / Time: 4.387 sec / Speedup: 2.337 / Efficiency: 78% / LogL: -6850
+Threads: 4 / Time: 4.113 sec / Speedup: 2.493 / Efficiency: 62% / LogL: -6850
+Threads: 5 / Time: 3.751 sec / Speedup: 2.734 / Efficiency: 55% / LogL: -6850
+Threads: 6 / Time: 3.317 sec / Speedup: 3.091 / Efficiency: 52% / LogL: -6850
+Threads: 7 / Time: 3.003 sec / Speedup: 3.414 / Efficiency: 49% / LogL: -6850
+Determining AUTO threadcount: done in 35.4883 secs using 315.2% CPU
+BEST NUMBER OF THREADS: 6
+
+539  mtInv+F+R3    4895.770     74  9939.539     9960.763     10264.665
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+93 trees examined
+Threads: 1 / Time: 10.088 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6947
+Threads: 2 / Time: 5.794 sec / Speedup: 1.741 / Efficiency: 87% / LogL: -6947
+Threads: 3 / Time: 4.436 sec / Speedup: 2.274 / Efficiency: 76% / LogL: -6947
+Threads: 4 / Time: 3.831 sec / Speedup: 2.633 / Efficiency: 66% / LogL: -6947
+Threads: 5 / Time: 4.143 sec / Speedup: 2.435 / Efficiency: 49% / LogL: -6947
+Determining AUTO threadcount: done in 28.2917 secs using 248.3% CPU
+BEST NUMBER OF THREADS: 4
+
+551  mtMAM+R2      5172.305     53  10450.610    10461.132    10683.470
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+62 trees examined
+Threads: 1 / Time: 10.019 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6760
+Threads: 2 / Time: 5.691 sec / Speedup: 1.761 / Efficiency: 88% / LogL: -6760
+Threads: 3 / Time: 4.734 sec / Speedup: 2.116 / Efficiency: 71% / LogL: -6760
+Threads: 4 / Time: 3.976 sec / Speedup: 2.520 / Efficiency: 63% / LogL: -6760
+Threads: 5 / Time: 3.545 sec / Speedup: 2.826 / Efficiency: 57% / LogL: -6760
+Threads: 6 / Time: 3.319 sec / Speedup: 3.019 / Efficiency: 50% / LogL: -6760
+Threads: 7 / Time: 2.957 sec / Speedup: 3.388 / Efficiency: 48% / LogL: -6760
+Determining AUTO threadcount: done in 34.2423 secs using 318% CPU
+BEST NUMBER OF THREADS: 6
+
+552  mtMAM+R3      5155.663     55  10421.326    10432.691    10662.974
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+96 trees examined
+Threads: 1 / Time: 10.007 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6460
+Threads: 2 / Time: 5.815 sec / Speedup: 1.721 / Efficiency: 86% / LogL: -6460
+Threads: 3 / Time: 4.504 sec / Speedup: 2.222 / Efficiency: 74% / LogL: -6460
+Threads: 4 / Time: 4.780 sec / Speedup: 2.094 / Efficiency: 52% / LogL: -6460
+Threads: 5 / Time: 4.084 sec / Speedup: 2.450 / Efficiency: 49% / LogL: -6460
+Determining AUTO threadcount: done in 29.1902 secs using 253.1% CPU
+BEST NUMBER OF THREADS: 3
+
+564  mtMAM+F+R2    5037.660     72  10219.321    10239.344    10535.659
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+60 trees examined
+Threads: 1 / Time: 10.068 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6073
+Threads: 2 / Time: 5.733 sec / Speedup: 1.756 / Efficiency: 88% / LogL: -6073
+Threads: 3 / Time: 5.214 sec / Speedup: 1.931 / Efficiency: 64% / LogL: -6073
+Threads: 4 / Time: 4.238 sec / Speedup: 2.376 / Efficiency: 59% / LogL: -6073
+Threads: 5 / Time: 2.875 sec / Speedup: 3.502 / Efficiency: 70% / LogL: -6073
+Threads: 6 / Time: 3.234 sec / Speedup: 3.113 / Efficiency: 52% / LogL: -6073
+Determining AUTO threadcount: done in 31.363 secs using 277.8% CPU
+BEST NUMBER OF THREADS: 5
+
+565  mtMAM+F+R3    5021.657     74  10191.313    10212.537    10516.439
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+95 trees examined
+Threads: 1 / Time: 10.070 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6794
+Threads: 2 / Time: 5.841 sec / Speedup: 1.724 / Efficiency: 86% / LogL: -6794
+Threads: 3 / Time: 4.254 sec / Speedup: 2.367 / Efficiency: 79% / LogL: -6794
+Threads: 4 / Time: 4.269 sec / Speedup: 2.359 / Efficiency: 59% / LogL: -6794
+Threads: 5 / Time: 3.932 sec / Speedup: 2.561 / Efficiency: 51% / LogL: -6794
+Threads: 6 / Time: 2.801 sec / Speedup: 3.595 / Efficiency: 60% / LogL: -6794
+Threads: 7 / Time: 2.811 sec / Speedup: 3.583 / Efficiency: 51% / LogL: -6794
+Threads: 8 / Time: 3.183 sec / Speedup: 3.164 / Efficiency: 40% / LogL: -6794
+Determining AUTO threadcount: done in 37.1625 secs using 354.8% CPU
+BEST NUMBER OF THREADS: 6
+
+577  HIVb+R2       5025.875     53  10157.749    10168.271    10390.610
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+58 trees examined
+Threads: 1 / Time: 10.102 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6553
+Threads: 2 / Time: 5.316 sec / Speedup: 1.900 / Efficiency: 95% / LogL: -6553
+Threads: 3 / Time: 3.961 sec / Speedup: 2.551 / Efficiency: 85% / LogL: -6553
+Threads: 4 / Time: 3.242 sec / Speedup: 3.116 / Efficiency: 78% / LogL: -6553
+Threads: 5 / Time: 3.366 sec / Speedup: 3.001 / Efficiency: 60% / LogL: -6553
+Threads: 6 / Time: 3.208 sec / Speedup: 3.149 / Efficiency: 52% / LogL: -6553
+Threads: 7 / Time: 2.794 sec / Speedup: 3.616 / Efficiency: 52% / LogL: -6553
+Threads: 8 / Time: 2.744 sec / Speedup: 3.682 / Efficiency: 46% / LogL: -6553
+Determining AUTO threadcount: done in 34.7346 secs using 351.7% CPU
+BEST NUMBER OF THREADS: 7
+
+578  HIVb+R3       5010.827     55  10131.654    10143.019    10373.301
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+97 trees examined
+Threads: 1 / Time: 10.076 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6489
+Threads: 2 / Time: 5.737 sec / Speedup: 1.756 / Efficiency: 88% / LogL: -6489
+Threads: 3 / Time: 5.076 sec / Speedup: 1.985 / Efficiency: 66% / LogL: -6489
+Threads: 4 / Time: 4.559 sec / Speedup: 2.210 / Efficiency: 55% / LogL: -6489
+Threads: 5 / Time: 3.947 sec / Speedup: 2.553 / Efficiency: 51% / LogL: -6489
+Threads: 6 / Time: 3.626 sec / Speedup: 2.779 / Efficiency: 46% / LogL: -6489
+Determining AUTO threadcount: done in 33.0218 secs using 288.8% CPU
+BEST NUMBER OF THREADS: 5
+
+590  HIVb+F+R2     4923.853     72  9991.706     10011.729    10308.045
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+63 trees examined
+Threads: 1 / Time: 10.113 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6783
+Threads: 2 / Time: 5.714 sec / Speedup: 1.770 / Efficiency: 88% / LogL: -6783
+Threads: 3 / Time: 4.121 sec / Speedup: 2.454 / Efficiency: 82% / LogL: -6783
+Threads: 4 / Time: 4.032 sec / Speedup: 2.508 / Efficiency: 63% / LogL: -6783
+Threads: 5 / Time: 4.215 sec / Speedup: 2.399 / Efficiency: 48% / LogL: -6783
+Determining AUTO threadcount: done in 28.1955 secs using 249.9% CPU
+BEST NUMBER OF THREADS: 3
+
+591  HIVb+F+R3     4905.726     74  9959.452     9980.676     10284.578
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+98 trees examined
+Threads: 1 / Time: 10.092 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6435
+Threads: 2 / Time: 7.104 sec / Speedup: 1.421 / Efficiency: 71% / LogL: -6435
+Threads: 3 / Time: 5.410 sec / Speedup: 1.865 / Efficiency: 62% / LogL: -6435
+Threads: 4 / Time: 3.501 sec / Speedup: 2.883 / Efficiency: 72% / LogL: -6435
+Threads: 5 / Time: 3.143 sec / Speedup: 3.211 / Efficiency: 64% / LogL: -6435
+Threads: 6 / Time: 3.411 sec / Speedup: 2.959 / Efficiency: 49% / LogL: -6435
+Determining AUTO threadcount: done in 32.6627 secs using 274.9% CPU
+BEST NUMBER OF THREADS: 5
+
+603  HIVw+R2       5159.469     53  10424.938    10435.460    10657.799
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+57 trees examined
+Threads: 1 / Time: 10.015 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6997
+Threads: 2 / Time: 4.988 sec / Speedup: 2.008 / Efficiency: 100% / LogL: -6997
+Threads: 3 / Time: 3.642 sec / Speedup: 2.750 / Efficiency: 92% / LogL: -6997
+Threads: 4 / Time: 3.462 sec / Speedup: 2.893 / Efficiency: 72% / LogL: -6997
+Threads: 5 / Time: 2.761 sec / Speedup: 3.627 / Efficiency: 73% / LogL: -6997
+Threads: 6 / Time: 2.389 sec / Speedup: 4.192 / Efficiency: 70% / LogL: -6997
+Threads: 7 / Time: 2.161 sec / Speedup: 4.635 / Efficiency: 66% / LogL: -6997
+Threads: 8 / Time: 2.272 sec / Speedup: 4.407 / Efficiency: 55% / LogL: -6997
+Threads: 9 / Time: 2.747 sec / Speedup: 3.645 / Efficiency: 41% / LogL: -6997
+Determining AUTO threadcount: done in 34.4395 secs using 377.1% CPU
+BEST NUMBER OF THREADS: 7
+
+604  HIVw+R3       5144.314     55  10398.627    10409.993    10640.275
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+90 trees examined
+Threads: 1 / Time: 10.009 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6672
+Threads: 2 / Time: 5.506 sec / Speedup: 1.818 / Efficiency: 91% / LogL: -6672
+Threads: 3 / Time: 4.829 sec / Speedup: 2.073 / Efficiency: 69% / LogL: -6672
+Threads: 4 / Time: 4.281 sec / Speedup: 2.338 / Efficiency: 58% / LogL: -6672
+Threads: 5 / Time: 3.748 sec / Speedup: 2.671 / Efficiency: 53% / LogL: -6672
+Threads: 6 / Time: 2.714 sec / Speedup: 3.688 / Efficiency: 61% / LogL: -6672
+Threads: 7 / Time: 2.912 sec / Speedup: 3.438 / Efficiency: 49% / LogL: -6672
+Determining AUTO threadcount: done in 33.9983 secs using 314.5% CPU
+BEST NUMBER OF THREADS: 6
+
+616  HIVw+F+R2     4985.145     72  10114.289    10134.312    10430.628
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+62 trees examined
+Threads: 1 / Time: 10.057 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6621
+Threads: 2 / Time: 6.662 sec / Speedup: 1.509 / Efficiency: 75% / LogL: -6621
+Threads: 3 / Time: 4.284 sec / Speedup: 2.347 / Efficiency: 78% / LogL: -6621
+Threads: 4 / Time: 4.289 sec / Speedup: 2.345 / Efficiency: 59% / LogL: -6621
+Threads: 5 / Time: 3.319 sec / Speedup: 3.030 / Efficiency: 61% / LogL: -6621
+Threads: 6 / Time: 2.710 sec / Speedup: 3.710 / Efficiency: 62% / LogL: -6621
+Threads: 7 / Time: 2.607 sec / Speedup: 3.857 / Efficiency: 55% / LogL: -6621
+Threads: 8 / Time: 2.617 sec / Speedup: 3.843 / Efficiency: 48% / LogL: -6621
+Determining AUTO threadcount: done in 36.5465 secs using 340.2% CPU
+BEST NUMBER OF THREADS: 6
+
+617  HIVw+F+R3     4964.225     74  10076.450    10097.674    10401.576
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+98 trees examined
+Threads: 1 / Time: 10.048 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6968
+Threads: 2 / Time: 6.161 sec / Speedup: 1.631 / Efficiency: 82% / LogL: -6968
+Threads: 3 / Time: 4.375 sec / Speedup: 2.297 / Efficiency: 77% / LogL: -6968
+Threads: 4 / Time: 4.283 sec / Speedup: 2.346 / Efficiency: 59% / LogL: -6968
+Threads: 5 / Time: 3.249 sec / Speedup: 3.092 / Efficiency: 62% / LogL: -6968
+Threads: 6 / Time: 2.859 sec / Speedup: 3.515 / Efficiency: 59% / LogL: -6968
+Threads: 7 / Time: 2.642 sec / Speedup: 3.804 / Efficiency: 54% / LogL: -6968
+Threads: 8 / Time: 2.780 sec / Speedup: 3.614 / Efficiency: 45% / LogL: -6968
+Determining AUTO threadcount: done in 36.3979 secs using 344.8% CPU
+BEST NUMBER OF THREADS: 7
+
+629  FLU+R2        5007.435     53  10120.869    10131.392    10353.730
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+64 trees examined
+Threads: 1 / Time: 10.038 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6390
+Threads: 2 / Time: 5.873 sec / Speedup: 1.709 / Efficiency: 85% / LogL: -6390
+Threads: 3 / Time: 4.193 sec / Speedup: 2.394 / Efficiency: 80% / LogL: -6390
+Threads: 4 / Time: 3.714 sec / Speedup: 2.703 / Efficiency: 68% / LogL: -6390
+Threads: 5 / Time: 2.833 sec / Speedup: 3.543 / Efficiency: 71% / LogL: -6390
+Threads: 6 / Time: 2.528 sec / Speedup: 3.971 / Efficiency: 66% / LogL: -6390
+Threads: 7 / Time: 2.336 sec / Speedup: 4.298 / Efficiency: 61% / LogL: -6390
+Threads: 8 / Time: 2.550 sec / Speedup: 3.937 / Efficiency: 49% / LogL: -6390
+Determining AUTO threadcount: done in 34.065 secs using 335.6% CPU
+BEST NUMBER OF THREADS: 7
+
+630  FLU+R3        4991.139     55  10092.278    10103.643    10333.926
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+97 trees examined
+Threads: 1 / Time: 10.071 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6035
+Threads: 2 / Time: 5.717 sec / Speedup: 1.761 / Efficiency: 88% / LogL: -6035
+Threads: 3 / Time: 4.348 sec / Speedup: 2.316 / Efficiency: 77% / LogL: -6035
+Threads: 4 / Time: 3.842 sec / Speedup: 2.621 / Efficiency: 66% / LogL: -6035
+Threads: 5 / Time: 3.121 sec / Speedup: 3.227 / Efficiency: 65% / LogL: -6035
+Threads: 6 / Time: 2.876 sec / Speedup: 3.502 / Efficiency: 58% / LogL: -6035
+Threads: 7 / Time: 2.622 sec / Speedup: 3.841 / Efficiency: 55% / LogL: -6035
+Threads: 8 / Time: 2.624 sec / Speedup: 3.838 / Efficiency: 48% / LogL: -6035
+Determining AUTO threadcount: done in 35.222 secs using 343.3% CPU
+BEST NUMBER OF THREADS: 7
+
+642  FLU+F+R2      4888.653     72  9921.305     9941.328     10237.644
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+60 trees examined
+Threads: 1 / Time: 10.038 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6463
+Threads: 2 / Time: 5.688 sec / Speedup: 1.765 / Efficiency: 88% / LogL: -6463
+Threads: 3 / Time: 3.985 sec / Speedup: 2.519 / Efficiency: 84% / LogL: -6463
+Threads: 4 / Time: 3.606 sec / Speedup: 2.784 / Efficiency: 70% / LogL: -6463
+Threads: 5 / Time: 3.399 sec / Speedup: 2.953 / Efficiency: 59% / LogL: -6463
+Threads: 6 / Time: 2.494 sec / Speedup: 4.024 / Efficiency: 67% / LogL: -6463
+Threads: 7 / Time: 2.335 sec / Speedup: 4.298 / Efficiency: 61% / LogL: -6463
+Threads: 8 / Time: 2.328 sec / Speedup: 4.312 / Efficiency: 54% / LogL: -6463
+Threads: 9 / Time: 2.712 sec / Speedup: 3.701 / Efficiency: 41% / LogL: -6463
+Determining AUTO threadcount: done in 36.5869 secs using 377.1% CPU
+BEST NUMBER OF THREADS: 7
+
+643  FLU+F+R3      4873.495     74  9894.991     9916.214     10220.116
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+98 trees examined
+Threads: 1 / Time: 10.007 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6360
+Threads: 2 / Time: 6.135 sec / Speedup: 1.631 / Efficiency: 82% / LogL: -6360
+Threads: 3 / Time: 4.868 sec / Speedup: 2.056 / Efficiency: 69% / LogL: -6360
+Threads: 4 / Time: 3.917 sec / Speedup: 2.555 / Efficiency: 64% / LogL: -6360
+Threads: 5 / Time: 3.094 sec / Speedup: 3.234 / Efficiency: 65% / LogL: -6360
+Threads: 6 / Time: 2.731 sec / Speedup: 3.664 / Efficiency: 61% / LogL: -6360
+Threads: 7 / Time: 2.985 sec / Speedup: 3.353 / Efficiency: 48% / LogL: -6360
+Determining AUTO threadcount: done in 33.7365 secs using 309% CPU
+BEST NUMBER OF THREADS: 6
+
+655  rtREV+R2      4990.405     53  10086.810    10097.332    10319.670
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+64 trees examined
+Threads: 1 / Time: 10.025 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -5889
+Threads: 2 / Time: 5.891 sec / Speedup: 1.702 / Efficiency: 85% / LogL: -5889
+Threads: 3 / Time: 5.002 sec / Speedup: 2.004 / Efficiency: 67% / LogL: -5889
+Threads: 4 / Time: 4.113 sec / Speedup: 2.437 / Efficiency: 61% / LogL: -5889
+Threads: 5 / Time: 3.621 sec / Speedup: 2.769 / Efficiency: 55% / LogL: -5889
+Threads: 6 / Time: 3.574 sec / Speedup: 2.805 / Efficiency: 47% / LogL: -5889
+Determining AUTO threadcount: done in 32.2272 secs using 285.5% CPU
+BEST NUMBER OF THREADS: 5
+
+656  rtREV+R3      4981.332     55  10072.664    10084.029    10314.311
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+98 trees examined
+Threads: 1 / Time: 10.067 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6375
+Threads: 2 / Time: 6.029 sec / Speedup: 1.670 / Efficiency: 83% / LogL: -6375
+Threads: 3 / Time: 5.019 sec / Speedup: 2.006 / Efficiency: 67% / LogL: -6375
+Threads: 4 / Time: 4.412 sec / Speedup: 2.281 / Efficiency: 57% / LogL: -6375
+Threads: 5 / Time: 4.109 sec / Speedup: 2.450 / Efficiency: 49% / LogL: -6375
+Determining AUTO threadcount: done in 29.6367 secs using 251.6% CPU
+BEST NUMBER OF THREADS: 4
+
+668  rtREV+F+R2    4874.830     72  9893.660     9913.682     10209.998
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+65 trees examined
+Threads: 1 / Time: 10.077 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6664
+Threads: 2 / Time: 5.702 sec / Speedup: 1.767 / Efficiency: 88% / LogL: -6664
+Threads: 3 / Time: 4.428 sec / Speedup: 2.276 / Efficiency: 76% / LogL: -6664
+Threads: 4 / Time: 4.158 sec / Speedup: 2.423 / Efficiency: 61% / LogL: -6664
+Threads: 5 / Time: 3.584 sec / Speedup: 2.812 / Efficiency: 56% / LogL: -6664
+Threads: 6 / Time: 3.515 sec / Speedup: 2.867 / Efficiency: 48% / LogL: -6664
+Determining AUTO threadcount: done in 31.4649 secs using 284.8% CPU
+BEST NUMBER OF THREADS: 5
+
+669  rtREV+F+R3    4864.178     74  9876.356     9897.580     10201.482
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+93 trees examined
+Threads: 1 / Time: 10.108 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6586
+Threads: 2 / Time: 6.237 sec / Speedup: 1.621 / Efficiency: 81% / LogL: -6586
+Threads: 3 / Time: 4.362 sec / Speedup: 2.317 / Efficiency: 77% / LogL: -6586
+Threads: 4 / Time: 4.271 sec / Speedup: 2.366 / Efficiency: 59% / LogL: -6586
+Threads: 5 / Time: 3.923 sec / Speedup: 2.577 / Efficiency: 52% / LogL: -6586
+Threads: 6 / Time: 3.536 sec / Speedup: 2.858 / Efficiency: 48% / LogL: -6586
+Determining AUTO threadcount: done in 32.4383 secs using 285.3% CPU
+BEST NUMBER OF THREADS: 5
+
+681  cpREV+R2      4927.710     53  9961.421     9971.943     10194.281
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+62 trees examined
+Threads: 1 / Time: 10.094 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -5786
+Threads: 2 / Time: 6.463 sec / Speedup: 1.562 / Efficiency: 78% / LogL: -5786
+Threads: 3 / Time: 4.939 sec / Speedup: 2.044 / Efficiency: 68% / LogL: -5786
+Threads: 4 / Time: 4.143 sec / Speedup: 2.436 / Efficiency: 61% / LogL: -5786
+Threads: 5 / Time: 3.450 sec / Speedup: 2.926 / Efficiency: 59% / LogL: -5786
+Threads: 6 / Time: 3.232 sec / Speedup: 3.123 / Efficiency: 52% / LogL: -5786
+Threads: 7 / Time: 3.281 sec / Speedup: 3.076 / Efficiency: 44% / LogL: -5786
+Determining AUTO threadcount: done in 35.6032 secs using 317.3% CPU
+BEST NUMBER OF THREADS: 6
+
+682  cpREV+R3      4918.735     55  9947.470     9958.835     10189.117
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+101 trees examined
+Threads: 1 / Time: 10.046 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6420
+Threads: 2 / Time: 5.920 sec / Speedup: 1.697 / Efficiency: 85% / LogL: -6420
+Threads: 3 / Time: 5.467 sec / Speedup: 1.837 / Efficiency: 61% / LogL: -6420
+Threads: 4 / Time: 3.841 sec / Speedup: 2.616 / Efficiency: 65% / LogL: -6420
+Threads: 5 / Time: 3.595 sec / Speedup: 2.794 / Efficiency: 56% / LogL: -6420
+Threads: 6 / Time: 3.603 sec / Speedup: 2.788 / Efficiency: 46% / LogL: -6420
+Determining AUTO threadcount: done in 32.4729 secs using 284.1% CPU
+BEST NUMBER OF THREADS: 5
+
+694  cpREV+F+R2    4870.971     72  9885.942     9905.965     10202.281
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+60 trees examined
+Threads: 1 / Time: 10.037 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6402
+Threads: 2 / Time: 5.536 sec / Speedup: 1.813 / Efficiency: 91% / LogL: -6402
+Threads: 3 / Time: 4.695 sec / Speedup: 2.138 / Efficiency: 71% / LogL: -6402
+Threads: 4 / Time: 3.575 sec / Speedup: 2.808 / Efficiency: 70% / LogL: -6402
+Threads: 5 / Time: 3.591 sec / Speedup: 2.795 / Efficiency: 56% / LogL: -6402
+Threads: 6 / Time: 3.572 sec / Speedup: 2.810 / Efficiency: 47% / LogL: -6402
+Determining AUTO threadcount: done in 31.006 secs using 284% CPU
+BEST NUMBER OF THREADS: 4
+
+695  cpREV+F+R3    4860.887     74  9869.773     9890.997     10194.899
+WARNING: NONREV model will estimate 379 substitution rates that might be overfitting!
+WARNING: Please only use NONREV with very large data and always test for model fit!
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+48 trees examined
+Threads: 1 / Time: 10.226 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6266
+Threads: 2 / Time: 7.972 sec / Speedup: 1.283 / Efficiency: 64% / LogL: -6266
+Threads: 3 / Time: 8.231 sec / Speedup: 1.242 / Efficiency: 41% / LogL: -6266
+Determining AUTO threadcount: done in 26.4289 secs using 191.2% CPU
+BEST NUMBER OF THREADS: 2
+
+707  NONREV+FO+R2  4628.267     433 10122.534    12414.265    12024.958
+WARNING: NONREV model will estimate 379 substitution rates that might be overfitting!
+WARNING: Please only use NONREV with very large data and always test for model fit!
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+30 trees examined
+Threads: 1 / Time: 10.193 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6518
+Threads: 2 / Time: 8.027 sec / Speedup: 1.270 / Efficiency: 63% / LogL: -6518
+Threads: 3 / Time: 7.582 sec / Speedup: 1.344 / Efficiency: 45% / LogL: -6518
+Determining AUTO threadcount: done in 25.8023 secs using 188.7% CPU
+BEST NUMBER OF THREADS: 2
+
+708  NONREV+FO+R3  4618.128     435 10106.255    12447.737    12017.467
+WARNING: NONREV model will estimate 379 substitution rates that might be overfitting!
+WARNING: Please only use NONREV with very large data and always test for model fit!
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+48 trees examined
+Threads: 1 / Time: 10.160 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6038
+Threads: 2 / Time: 8.097 sec / Speedup: 1.255 / Efficiency: 63% / LogL: -6038
+Threads: 3 / Time: 7.737 sec / Speedup: 1.313 / Efficiency: 44% / LogL: -6038
+Determining AUTO threadcount: done in 25.9936 secs using 189.4% CPU
+BEST NUMBER OF THREADS: 2
+
+720  NONREV+F+R2   4629.781     452 10163.561    12987.782    12149.464
+WARNING: NONREV model will estimate 379 substitution rates that might be overfitting!
+WARNING: Please only use NONREV with very large data and always test for model fit!
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+28 trees examined
+Threads: 1 / Time: 10.063 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6807
+Threads: 2 / Time: 7.558 sec / Speedup: 1.331 / Efficiency: 67% / LogL: -6807
+Threads: 3 / Time: 6.737 sec / Speedup: 1.494 / Efficiency: 50% / LogL: -6807
+Determining AUTO threadcount: done in 24.3577 secs using 185.3% CPU
+BEST NUMBER OF THREADS: 2
+
+721  NONREV+F+R3   4614.883     454 10137.767    13026.858    12132.457
+WARNING: GTR20 model will estimate 189 substitution rates that might be overfitting!
+WARNING: Please only use GTR20 with very large data and always test for model fit!
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+96 trees examined
+Threads: 1 / Time: 10.055 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -5670
+Threads: 2 / Time: 5.576 sec / Speedup: 1.803 / Efficiency: 90% / LogL: -5670
+Threads: 3 / Time: 4.143 sec / Speedup: 2.427 / Efficiency: 81% / LogL: -5670
+Threads: 4 / Time: 4.220 sec / Speedup: 2.383 / Efficiency: 60% / LogL: -5670
+Threads: 5 / Time: 4.181 sec / Speedup: 2.405 / Efficiency: 48% / LogL: -5670
+Determining AUTO threadcount: done in 28.1757 secs using 250.9% CPU
+BEST NUMBER OF THREADS: 3
+
+733  GTR20+F+R2    4686.127     261 9894.253     10301.289    11040.981
+WARNING: GTR20 model will estimate 189 substitution rates that might be overfitting!
+WARNING: Please only use GTR20 with very large data and always test for model fit!
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+64 trees examined
+Threads: 1 / Time: 10.132 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -5729
+Threads: 2 / Time: 6.565 sec / Speedup: 1.543 / Efficiency: 77% / LogL: -5729
+Threads: 3 / Time: 5.021 sec / Speedup: 2.018 / Efficiency: 67% / LogL: -5729
+Threads: 4 / Time: 4.069 sec / Speedup: 2.490 / Efficiency: 62% / LogL: -5729
+Threads: 5 / Time: 3.879 sec / Speedup: 2.612 / Efficiency: 52% / LogL: -5729
+Threads: 6 / Time: 3.038 sec / Speedup: 3.335 / Efficiency: 56% / LogL: -5729
+Threads: 7 / Time: 3.053 sec / Speedup: 3.319 / Efficiency: 47% / LogL: -5729
+Determining AUTO threadcount: done in 35.7574 secs using 315.1% CPU
+BEST NUMBER OF THREADS: 6
+
+734  GTR20+F+R3    4671.312     263 9868.625     10284.385    11024.139
+WARNING: GTR20 model will estimate 189 substitution rates that might be overfitting!
+WARNING: Please only use GTR20 with very large data and always test for model fit!
+746  GTR20+F+R2    4686.127     261 9894.253     10301.289    11040.981
+WARNING: GTR20 model will estimate 189 substitution rates that might be overfitting!
+WARNING: Please only use GTR20 with very large data and always test for model fit!
+747  GTR20+F+R3    4671.312     263 9868.625     10284.385    11024.139
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+89 trees examined
+Threads: 1 / Time: 10.086 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6768
+Threads: 2 / Time: 5.326 sec / Speedup: 1.894 / Efficiency: 95% / LogL: -6768
+Threads: 3 / Time: 3.966 sec / Speedup: 2.543 / Efficiency: 85% / LogL: -6768
+Threads: 4 / Time: 3.929 sec / Speedup: 2.567 / Efficiency: 64% / LogL: -6768
+Threads: 5 / Time: 3.605 sec / Speedup: 2.798 / Efficiency: 56% / LogL: -6768
+Threads: 6 / Time: 3.185 sec / Speedup: 3.167 / Efficiency: 53% / LogL: -6768
+Threads: 7 / Time: 2.781 sec / Speedup: 3.627 / Efficiency: 52% / LogL: -6768
+Threads: 8 / Time: 3.288 sec / Speedup: 3.067 / Efficiency: 38% / LogL: -6768
+Determining AUTO threadcount: done in 36.167 secs using 359.2% CPU
+BEST NUMBER OF THREADS: 7
+
+759  Poisson+R2    5463.497     53  11032.994    11043.516    11265.854
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+53 trees examined
+Threads: 1 / Time: 10.177 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -7036
+Threads: 2 / Time: 5.101 sec / Speedup: 1.995 / Efficiency: 100% / LogL: -7036
+Threads: 3 / Time: 3.532 sec / Speedup: 2.882 / Efficiency: 96% / LogL: -7036
+Threads: 4 / Time: 3.189 sec / Speedup: 3.191 / Efficiency: 80% / LogL: -7036
+Threads: 5 / Time: 2.805 sec / Speedup: 3.628 / Efficiency: 73% / LogL: -7036
+Threads: 6 / Time: 2.714 sec / Speedup: 3.750 / Efficiency: 63% / LogL: -7036
+Threads: 7 / Time: 2.686 sec / Speedup: 3.789 / Efficiency: 54% / LogL: -7036
+Threads: 8 / Time: 2.479 sec / Speedup: 4.106 / Efficiency: 51% / LogL: -7036
+Threads: 9 / Time: 2.612 sec / Speedup: 3.896 / Efficiency: 43% / LogL: -7036
+Determining AUTO threadcount: done in 35.2954 secs using 382.7% CPU
+BEST NUMBER OF THREADS: 8
+
+760  Poisson+R3    5459.561     55  11029.121    11040.487    11270.769
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+89 trees examined
+Threads: 1 / Time: 10.022 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6645
+Threads: 2 / Time: 6.938 sec / Speedup: 1.444 / Efficiency: 72% / LogL: -6645
+Threads: 3 / Time: 4.392 sec / Speedup: 2.282 / Efficiency: 76% / LogL: -6645
+Threads: 4 / Time: 3.987 sec / Speedup: 2.513 / Efficiency: 63% / LogL: -6645
+Threads: 5 / Time: 3.577 sec / Speedup: 2.802 / Efficiency: 56% / LogL: -6645
+Threads: 6 / Time: 2.727 sec / Speedup: 3.675 / Efficiency: 61% / LogL: -6645
+Threads: 7 / Time: 2.758 sec / Speedup: 3.633 / Efficiency: 52% / LogL: -6645
+Threads: 8 / Time: 3.492 sec / Speedup: 2.870 / Efficiency: 36% / LogL: -6645
+Determining AUTO threadcount: done in 37.8948 secs using 351.5% CPU
+BEST NUMBER OF THREADS: 6
+
+772  Poisson+F+R2  5220.609     72  10585.217    10605.240    10901.556
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+62 trees examined
+Threads: 1 / Time: 10.085 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6917
+Threads: 2 / Time: 6.500 sec / Speedup: 1.551 / Efficiency: 78% / LogL: -6917
+Threads: 3 / Time: 4.981 sec / Speedup: 2.025 / Efficiency: 67% / LogL: -6917
+Threads: 4 / Time: 3.941 sec / Speedup: 2.559 / Efficiency: 64% / LogL: -6917
+Threads: 5 / Time: 2.897 sec / Speedup: 3.481 / Efficiency: 70% / LogL: -6917
+Threads: 6 / Time: 3.652 sec / Speedup: 2.761 / Efficiency: 46% / LogL: -6917
+Determining AUTO threadcount: done in 32.0591 secs using 279% CPU
+BEST NUMBER OF THREADS: 5
+
+773  Poisson+F+R3  5216.776     74  10581.552    10602.776    10906.678
+Akaike Information Criterion:           LG+F+R3
+Corrected Akaike Information Criterion: LG+F+R3
+Bayesian Information Criterion:         LG+R3
+Best-fit model: LG+R3 chosen according to BIC
+
+All model information printed to /gpfs0/bioinfo/projects/Itzhak_Mizrahi/09.Sarahm/05.Trees/02.AU-TEST/data//Generic/AU_TEST/OrthoGroup440/OrthoGroup440.model.gz
+CPU time for ModelFinder: 13684.807 seconds (3h:48m:4s)
+Wall-clock time for ModelFinder: 4546.102 seconds (1h:15m:46s)
+
+NOTE: 4 MB RAM (0 GB) is required!
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+64 trees examined
+Threads: 1 / Time: 10.074 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -6126
+Threads: 2 / Time: 5.897 sec / Speedup: 1.708 / Efficiency: 85% / LogL: -6126
+Threads: 3 / Time: 4.836 sec / Speedup: 2.083 / Efficiency: 69% / LogL: -6126
+Threads: 4 / Time: 4.064 sec / Speedup: 2.479 / Efficiency: 62% / LogL: -6126
+Threads: 5 / Time: 3.577 sec / Speedup: 2.816 / Efficiency: 56% / LogL: -6126
+Threads: 6 / Time: 3.377 sec / Speedup: 2.983 / Efficiency: 50% / LogL: -6126
+Determining AUTO threadcount: done in 31.8268 secs using 282.7% CPU
+BEST NUMBER OF THREADS: 5
+
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -4898.012
+Optimal log-likelihood: -4897.973
+Site proportion and rates:  (0.678,0.200) (0.174,1.600) (0.148,3.964)
+Parameters optimization took 1 rounds (0.050 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.0216944 secs using 498.5% CPU
+Computing ML distances took 0.021935 sec (of wall-clock time) 0.108391 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.000402234 secs using 167.6% CPU
+Constructing RapidNJ tree: done in 0.00859953 secs using 30.21% CPU
+Computing RapidNJ tree took 0.009160 sec (of wall-clock time) 0.003347 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -4321.877
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.065 second
+Computing log-likelihood of 98 initial trees ... 0.898 seconds
+Current best score: -4321.877
+
+Do NNI search on 20 best initial trees
+Optimizing NNI: done in 0.254739 secs using 494.5% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -4244.608
+Optimizing NNI: done in 0.443448 secs using 493.5% CPU
+Optimizing NNI: done in 0.588078 secs using 494.2% CPU
+Optimizing NNI: done in 0.639826 secs using 495.1% CPU
+Optimizing NNI: done in 0.767873 secs using 494.3% CPU
+Optimizing NNI: done in 0.468037 secs using 496.3% CPU
+Optimizing NNI: done in 0.860532 secs using 495.6% CPU
+Optimizing NNI: done in 0.68796 secs using 495.6% CPU
+Optimizing NNI: done in 0.574491 secs using 494.8% CPU
+Optimizing NNI: done in 0.846835 secs using 495.1% CPU
+Iteration 10 / LogL: -4245.212 / Time: 0h:0m:39s
+Optimizing NNI: done in 0.740599 secs using 495.6% CPU
+Optimizing NNI: done in 0.908866 secs using 495.5% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 12: -4242.773
+Optimizing NNI: done in 0.693367 secs using 497.5% CPU
+Optimizing NNI: done in 0.655705 secs using 496.6% CPU
+Optimizing NNI: done in 0.702441 secs using 495.9% CPU
+BETTER TREE FOUND at iteration 15: -4242.770
+Optimizing NNI: done in 0.727633 secs using 496.4% CPU
+Optimizing NNI: done in 0.699285 secs using 495.4% CPU
+Optimizing NNI: done in 0.692186 secs using 495% CPU
+Optimizing NNI: done in 0.906377 secs using 494.4% CPU
+Optimizing NNI: done in 0.733522 secs using 495.3% CPU
+Iteration 20 / LogL: -4244.599 / Time: 0h:0m:47s
+Finish initializing candidate tree set (20)
+Current best tree score: -4242.770 / CPU time: 15.339
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Optimizing NNI: done in 0.252194 secs using 495% CPU
+UPDATE BEST LOG-LIKELIHOOD: -4242.763
+Optimizing NNI: done in 0.186239 secs using 495.8% CPU
+Optimizing NNI: done in 0.218327 secs using 496.1% CPU
+Optimizing NNI: done in 0.132282 secs using 493.9% CPU
+BETTER TREE FOUND at iteration 24: -4242.762
+Optimizing NNI: done in 0.210734 secs using 493.8% CPU
+Optimizing NNI: done in 0.150799 secs using 496.4% CPU
+Optimizing NNI: done in 0.191189 secs using 497.1% CPU
+Optimizing NNI: done in 0.0992848 secs using 496.3% CPU
+Optimizing NNI: done in 0.249819 secs using 495.6% CPU
+Optimizing NNI: done in 0.190185 secs using 496% CPU
+Iteration 30 / LogL: -4244.662 / Time: 0h:0m:49s (0h:2m:40s left)
+Optimizing NNI: done in 0.17201 secs using 495.6% CPU
+Optimizing NNI: done in 0.155888 secs using 495% CPU
+Optimizing NNI: done in 0.267716 secs using 496.3% CPU
+Optimizing NNI: done in 0.258991 secs using 495.4% CPU
+Optimizing NNI: done in 0.200614 secs using 494.3% CPU
+Optimizing NNI: done in 0.242545 secs using 495.1% CPU
+Optimizing NNI: done in 0.161359 secs using 497% CPU
+Optimizing NNI: done in 0.205994 secs using 494.1% CPU
+Optimizing NNI: done in 0.148417 secs using 497.3% CPU
+Optimizing NNI: done in 0.174465 secs using 494% CPU
+Iteration 40 / LogL: -4242.768 / Time: 0h:0m:51s (0h:1m:50s left)
+Optimizing NNI: done in 0.148828 secs using 493.6% CPU
+Optimizing NNI: done in 0.212058 secs using 497% CPU
+Optimizing NNI: done in 0.168967 secs using 493.3% CPU
+Optimizing NNI: done in 0.16462 secs using 496.4% CPU
+Optimizing NNI: done in 0.173093 secs using 492.5% CPU
+UPDATE BEST LOG-LIKELIHOOD: -4242.762
+Optimizing NNI: done in 0.201241 secs using 495.5% CPU
+Optimizing NNI: done in 0.155631 secs using 496.8% CPU
+Optimizing NNI: done in 0.163203 secs using 492.5% CPU
+Optimizing NNI: done in 0.210569 secs using 493.2% CPU
+Optimizing NNI: done in 0.205184 secs using 495.7% CPU
+Iteration 50 / LogL: -4242.916 / Time: 0h:0m:53s (0h:1m:20s left)
+Optimizing NNI: done in 0.18996 secs using 491.2% CPU
+Optimizing NNI: done in 0.153663 secs using 490.9% CPU
+Optimizing NNI: done in 0.186418 secs using 492.3% CPU
+Optimizing NNI: done in 0.198273 secs using 496.4% CPU
+Optimizing NNI: done in 0.242857 secs using 495% CPU
+Optimizing NNI: done in 0.186905 secs using 496% CPU
+BETTER TREE FOUND at iteration 56: -4242.762
+Optimizing NNI: done in 0.166351 secs using 493.4% CPU
+Optimizing NNI: done in 0.17723 secs using 497.9% CPU
+Optimizing NNI: done in 0.327817 secs using 496% CPU
+Optimizing NNI: done in 0.210089 secs using 496.4% CPU
+Iteration 60 / LogL: -4242.763 / Time: 0h:0m:55s (0h:1m:29s left)
+Optimizing NNI: done in 0.3173 secs using 496.5% CPU
+Optimizing NNI: done in 0.21951 secs using 496.6% CPU
+Optimizing NNI: done in 0.257263 secs using 493.3% CPU
+Optimizing NNI: done in 0.182924 secs using 494.8% CPU
+UPDATE BEST LOG-LIKELIHOOD: -4242.762
+Optimizing NNI: done in 0.180773 secs using 493.4% CPU
+Optimizing NNI: done in 0.216481 secs using 493.9% CPU
+Optimizing NNI: done in 0.135646 secs using 498.1% CPU
+Optimizing NNI: done in 0.155337 secs using 493.1% CPU
+Optimizing NNI: done in 0.305909 secs using 496.6% CPU
+Optimizing NNI: done in 0.19636 secs using 494.7% CPU
+Iteration 70 / LogL: -4242.799 / Time: 0h:0m:57s (0h:1m:11s left)
+Optimizing NNI: done in 0.280832 secs using 493% CPU
+Optimizing NNI: done in 0.273313 secs using 498.4% CPU
+Optimizing NNI: done in 0.193959 secs using 497.5% CPU
+Optimizing NNI: done in 0.193517 secs using 494.8% CPU
+Optimizing NNI: done in 0.322296 secs using 493.8% CPU
+Optimizing NNI: done in 0.146867 secs using 495.5% CPU
+Optimizing NNI: done in 0.223092 secs using 499.2% CPU
+Optimizing NNI: done in 0.13573 secs using 493.4% CPU
+Optimizing NNI: done in 0.212732 secs using 492.9% CPU
+UPDATE BEST LOG-LIKELIHOOD: -4242.761
+Optimizing NNI: done in 0.276172 secs using 492.8% CPU
+Iteration 80 / LogL: -4242.845 / Time: 0h:0m:59s (0h:0m:57s left)
+Optimizing NNI: done in 0.243498 secs using 493.9% CPU
+Optimizing NNI: done in 0.179701 secs using 495.2% CPU
+Optimizing NNI: done in 0.170899 secs using 495.2% CPU
+Optimizing NNI: done in 0.193817 secs using 496.2% CPU
+Optimizing NNI: done in 0.351638 secs using 497.1% CPU
+Optimizing NNI: done in 0.205678 secs using 494.2% CPU
+Optimizing NNI: done in 0.142186 secs using 497.9% CPU
+Optimizing NNI: done in 0.145864 secs using 494% CPU
+Optimizing NNI: done in 0.179366 secs using 495.3% CPU
+Optimizing NNI: done in 0.166195 secs using 495.5% CPU
+Iteration 90 / LogL: -4242.809 / Time: 0h:1m:1s (0h:0m:45s left)
+Optimizing NNI: done in 0.170137 secs using 494% CPU
+Optimizing NNI: done in 0.222416 secs using 497.7% CPU
+Optimizing NNI: done in 0.141855 secs using 494.6% CPU
+Optimizing NNI: done in 0.209819 secs using 494.5% CPU
+Optimizing NNI: done in 0.129908 secs using 492.5% CPU
+Optimizing NNI: done in 0.169131 secs using 493.9% CPU
+Optimizing NNI: done in 0.214659 secs using 492.9% CPU
+Optimizing NNI: done in 0.132375 secs using 495.1% CPU
+Optimizing NNI: done in 0.106471 secs using 492% CPU
+Optimizing NNI: done in 0.177353 secs using 496% CPU
+Iteration 100 / LogL: -4242.823 / Time: 0h:1m:3s (0h:0m:35s left)
+Optimizing NNI: done in 0.161318 secs using 495.8% CPU
+Optimizing NNI: done in 0.254309 secs using 496.9% CPU
+Optimizing NNI: done in 0.139456 secs using 495.8% CPU
+Optimizing NNI: done in 0.146425 secs using 498.7% CPU
+Optimizing NNI: done in 0.175392 secs using 495.3% CPU
+Optimizing NNI: done in 0.164746 secs using 494.3% CPU
+Optimizing NNI: done in 0.169237 secs using 496.1% CPU
+Optimizing NNI: done in 0.156887 secs using 496.2% CPU
+Optimizing NNI: done in 0.211477 secs using 494.3% CPU
+Optimizing NNI: done in 0.149048 secs using 494.4% CPU
+Iteration 110 / LogL: -4242.870 / Time: 0h:1m:5s (0h:0m:27s left)
+Optimizing NNI: done in 0.258502 secs using 496.9% CPU
+Optimizing NNI: done in 0.236223 secs using 494.6% CPU
+Optimizing NNI: done in 0.158506 secs using 493.4% CPU
+Optimizing NNI: done in 0.228484 secs using 495.5% CPU
+Optimizing NNI: done in 0.253767 secs using 495.7% CPU
+Optimizing NNI: done in 0.0936506 secs using 490.4% CPU
+Optimizing NNI: done in 0.345225 secs using 495.9% CPU
+Optimizing NNI: done in 0.207789 secs using 495.5% CPU
+Optimizing NNI: done in 0.128616 secs using 494.7% CPU
+Optimizing NNI: done in 0.192982 secs using 496.4% CPU
+Iteration 120 / LogL: -4242.769 / Time: 0h:1m:7s (0h:0m:20s left)
+Optimizing NNI: done in 0.134349 secs using 495.2% CPU
+Optimizing NNI: done in 0.142273 secs using 497% CPU
+Optimizing NNI: done in 0.140741 secs using 496.3% CPU
+Optimizing NNI: done in 0.175167 secs using 493.5% CPU
+Optimizing NNI: done in 0.156289 secs using 496.5% CPU
+Optimizing NNI: done in 0.170961 secs using 493.3% CPU
+Optimizing NNI: done in 0.182086 secs using 495% CPU
+Optimizing NNI: done in 0.136519 secs using 497% CPU
+Optimizing NNI: done in 0.179397 secs using 495.4% CPU
+Optimizing NNI: done in 0.184768 secs using 494.6% CPU
+Iteration 130 / LogL: -4244.598 / Time: 0h:1m:8s (0h:0m:13s left)
+Optimizing NNI: done in 0.176165 secs using 492.9% CPU
+Optimizing NNI: done in 0.232533 secs using 492.8% CPU
+Optimizing NNI: done in 0.234086 secs using 495.7% CPU
+Optimizing NNI: done in 0.154975 secs using 493.3% CPU
+Optimizing NNI: done in 0.141941 secs using 495.1% CPU
+Optimizing NNI: done in 0.287623 secs using 494.1% CPU
+Optimizing NNI: done in 0.169924 secs using 493.3% CPU
+Optimizing NNI: done in 0.142958 secs using 490.2% CPU
+Optimizing NNI: done in 0.185919 secs using 493.3% CPU
+Optimizing NNI: done in 0.182523 secs using 495.2% CPU
+Iteration 140 / LogL: -4242.764 / Time: 0h:1m:10s (0h:0m:8s left)
+Optimizing NNI: done in 0.127473 secs using 493.1% CPU
+Optimizing NNI: done in 0.235192 secs using 494.8% CPU
+Optimizing NNI: done in 0.164269 secs using 497.2% CPU
+Optimizing NNI: done in 0.232846 secs using 494.9% CPU
+Optimizing NNI: done in 0.142974 secs using 495.8% CPU
+Optimizing NNI: done in 0.127326 secs using 491.9% CPU
+UPDATE BEST LOG-LIKELIHOOD: -4242.761
+Optimizing NNI: done in 0.327187 secs using 495.8% CPU
+Optimizing NNI: done in 0.250803 secs using 494.9% CPU
+Optimizing NNI: done in 0.173185 secs using 495.8% CPU
+Optimizing NNI: done in 0.16852 secs using 493.7% CPU
+Iteration 150 / LogL: -4242.786 / Time: 0h:1m:12s (0h:0m:2s left)
+Optimizing NNI: done in 0.183696 secs using 496.9% CPU
+Optimizing NNI: done in 0.143966 secs using 496.6% CPU
+Optimizing NNI: done in 0.229149 secs using 494.3% CPU
+Optimizing NNI: done in 0.187891 secs using 492.9% CPU
+Optimizing NNI: done in 0.179076 secs using 492.3% CPU
+Optimizing NNI: done in 0.207321 secs using 494.4% CPU
+Optimizing NNI: done in 0.152449 secs using 494.7% CPU
+TREE SEARCH COMPLETED AFTER 157 ITERATIONS / Time: 0h:1m:14s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -4242.761
+2. Current log-likelihood: -4242.699
+3. Current log-likelihood: -4242.598
+4. Current log-likelihood: -4242.497
+5. Current log-likelihood: -4242.396
+6. Current log-likelihood: -4242.297
+7. Current log-likelihood: -4242.211
+8. Current log-likelihood: -4242.181
+Optimal log-likelihood: -4242.170
+Site proportion and rates:  (0.766,0.359) (0.195,2.327) (0.039,6.935)
+Parameters optimization took 8 rounds (0.386 sec)
+BEST SCORE FOUND : -4242.170
+Total tree length: 6.035
+
+Total number of iterations: 157
+CPU time used for tree search: 207.842 sec (0h:3m:27s)
+Wall-clock time used for tree search: 42.022 sec (0h:0m:42s)
+Total CPU time used: 301.241 sec (0h:5m:1s)
+Total wall-clock time used: 74.581 sec (0h:1m:14s)
+Reading trees in /gpfs0/bioinfo/projects/Itzhak_Mizrahi/09.Sarahm/05.Trees/02.AU-TEST/data//Generic/Merge_Trees/My_Project.nwk ...
+
+197 trees detected
+Note: 26.764 MB of RAM required!
+Creating 10000 bootstrap replicates...
+done
+Tree 1 / LogL: -4310.886
+Tree 2 / LogL: -4323.888
+Tree 3 / LogL: -4356.280
+Tree 4 / LogL: -4338.567
+Tree 5 / LogL: -4321.457
+Tree 6 / LogL: -4339.537
+Tree 7 / LogL: -4323.362
+Tree 8 / LogL: -4294.464
+Tree 9 / LogL: -4359.835
+Tree 10 / LogL: -4326.674
+Tree 11 / LogL: -4321.686
+Tree 12 / LogL: -4319.023
+Tree 13 / LogL: -4391.972
+Tree 14 / LogL: -4331.331
+Tree 15 / LogL: -4392.254
+Tree 16 / LogL: -4336.383
+Tree 17 / LogL: -4349.676
+Tree 18 / LogL: -4331.208
+Tree 19 / LogL: -4331.973
+Tree 20 / LogL: -4341.907
+Tree 21 / LogL: -4319.340
+Tree 22 / LogL: -4317.361
+Tree 23 / LogL: -4294.203
+Tree 24 / LogL: -4313.951
+Tree 25 / LogL: -4329.045
+Tree 26 / LogL: -4324.515
+Tree 27 / LogL: -4279.678
+Tree 28 / LogL: -4289.316
+Tree 29 / LogL: -4320.023
+Tree 30 / LogL: -4308.164
+Tree 31 / LogL: -4348.820
+Tree 32 / LogL: -4321.544
+Tree 33 / LogL: -4304.494
+Tree 34 / LogL: -4362.230
+Tree 35 / LogL: -4327.192
+Tree 36 / LogL: -4335.007
+Tree 37 / LogL: -4318.522
+Tree 38 / LogL: -4355.525
+Tree 39 / LogL: -4399.183
+Tree 40 / LogL: -4333.351
+Tree 41 / LogL: -4304.422
+Tree 42 / LogL: -4378.580
+Tree 43 / LogL: -4308.362
+Tree 44 / LogL: -4294.199
+Tree 45 / LogL: -4346.734
+Tree 46 / LogL: -4335.090
+Tree 47 / LogL: -4323.675
+Tree 48 / LogL: -4332.075
+Tree 49 / LogL: -4288.101
+Tree 50 / LogL: -4283.908
+Tree 51 / LogL: -4377.034
+Tree 52 / LogL: -4334.901
+Tree 53 / LogL: -4329.696
+Tree 54 / LogL: -4278.046
+Tree 55 / LogL: -4349.764
+Tree 56 / LogL: -4329.639
+Tree 57 / LogL: -4333.118
+Tree 58 / LogL: -4333.613
+Tree 59 / LogL: -4369.448
+Tree 60 / LogL: -4311.390
+Tree 61 / LogL: -4296.432
+Tree 62 / LogL: -4319.594
+Tree 63 / LogL: -4301.006
+Tree 64 / LogL: -4346.392
+Tree 65 / LogL: -4311.659
+Tree 66 / LogL: -4337.751
+Tree 67 / LogL: -4333.235
+Tree 68 / LogL: -4345.983
+Tree 69 / LogL: -4320.649
+Tree 70 / LogL: -4318.075
+Tree 71 / LogL: -4491.336
+Tree 72 / LogL: -4299.081
+Tree 73 / LogL: -4323.793
+Tree 74 / LogL: -4389.475
+Tree 75 / LogL: -4374.944
+Tree 76 / LogL: -4306.770
+Tree 77 / LogL: -4301.473
+Tree 78 / LogL: -4347.122
+Tree 79 / LogL: -4341.216
+Tree 80 / LogL: -5373.387
+Tree 81 / LogL: -4289.940
+Tree 82 / LogL: -4347.183
+Tree 83 / LogL: -4375.417
+Tree 84 / LogL: -4315.826
+Tree 85 / LogL: -4311.496
+Tree 86 / LogL: -4284.698
+Tree 87 / LogL: -4316.324
+Tree 88 / LogL: -4301.418
+Tree 89 / LogL: -4379.657
+Tree 90 / LogL: -4325.940
+Tree 91 / LogL: -4386.099
+Tree 92 / LogL: -4317.982
+Tree 93 / LogL: -4327.907
+Tree 94 / LogL: -4355.172
+Tree 95 / LogL: -4290.427
+Tree 96 / LogL: -4313.327
+Tree 97 / LogL: -4300.357
+Tree 98 / LogL: -4309.870
+Tree 99 / LogL: -4282.926
+Tree 100 / LogL: -4328.349
+Tree 101 / LogL: -4345.084
+Tree 102 / LogL: -4389.065
+Tree 103 / LogL: -4321.025
+Tree 104 / LogL: -4329.868
+Tree 105 / LogL: -4268.140
+Tree 106 / LogL: -4356.036
+Tree 107 / LogL: -4332.491
+Tree 108 / LogL: -4270.946
+Tree 109 / LogL: -4347.395
+Tree 110 / LogL: -4309.887
+Tree 111 / LogL: -4320.896
+Tree 112 / LogL: -4392.888
+Tree 113 / LogL: -4319.431
+Tree 114 / LogL: -4312.398
+Tree 115 / LogL: -4324.667
+Tree 116 / LogL: -4312.882
+Tree 117 / LogL: -4356.860
+Tree 118 / LogL: -4300.388
+Tree 119 / LogL: -4420.495
+Tree 120 / LogL: -4316.281
+Tree 121 / LogL: -4423.809
+Tree 122 / LogL: -4303.987
+Tree 123 / LogL: -4329.226
+Tree 124 / LogL: -4304.617
+Tree 125 / LogL: -4315.342
+Tree 126 / LogL: -4313.379
+Tree 127 / LogL: -4343.616
+Tree 128 / LogL: -4303.206
+Tree 129 / LogL: -4336.074
+Tree 130 / LogL: -4305.600
+Tree 131 / LogL: -4320.188
+Tree 132 / LogL: -4304.953
+Tree 133 / LogL: -4344.394
+Tree 134 / LogL: -4318.486
+Tree 135 / LogL: -4327.909
+Tree 136 / LogL: -4322.665
+Tree 137 / LogL: -4367.032
+Tree 138 / LogL: -4300.878
+Tree 139 / LogL: -4303.262
+Tree 140 / LogL: -4331.907
+Tree 141 / LogL: -4313.268
+Tree 142 / LogL: -4333.369
+Tree 143 / LogL: -4410.562
+Tree 144 / LogL: -4308.885
+Tree 145 / LogL: -4338.119
+Tree 146 / LogL: -4305.007
+Tree 147 / LogL: -4384.187
+Tree 148 / LogL: -4344.633
+Tree 149 / LogL: -4318.187
+Tree 150 / LogL: -4274.780
+Tree 151 / LogL: -4268.249
+Tree 152 / LogL: -4308.635
+Tree 153 / LogL: -4345.434
+Tree 154 / LogL: -4321.847
+Tree 155 / LogL: -4504.732
+Tree 156 / LogL: -4287.442
+Tree 157 / LogL: -4336.672
+Tree 158 / LogL: -4383.579
+Tree 159 / LogL: -4298.459
+Tree 160 / LogL: -4333.653
+Tree 161 / LogL: -4468.478
+Tree 162 / LogL: -4326.144
+Tree 163 / LogL: -4304.470
+Tree 164 / LogL: -4298.493
+Tree 165 / LogL: -4333.433
+Tree 166 / LogL: -4335.998
+Tree 167 / LogL: -4323.739
+Tree 168 / LogL: -4316.404
+Tree 169 / LogL: -4352.665
+Tree 170 / LogL: -4366.949
+Tree 171 / LogL: -4338.091
+Tree 172 / LogL: -4324.266
+Tree 173 / LogL: -4370.599
+Tree 174 / LogL: -4291.757
+Tree 175 / LogL: -4349.005
+Tree 176 / LogL: -4332.935
+Tree 177 / LogL: -4331.058
+Tree 178 / LogL: -4314.051
+Tree 179 / LogL: -4311.142
+Tree 180 / LogL: -4242.170
+Tree 181 / LogL: -4306.930
+Tree 182 / LogL: -4316.459
+Tree 183 / LogL: -4308.810
+Tree 184 / LogL: -4348.628
+Tree 185 / LogL: -4377.921
+Tree 186 / LogL: -4281.647
+Tree 187 / LogL: -4336.032
+Tree 188 / LogL: -4332.604
+Tree 189 / LogL: -4359.301
+Tree 190 / LogL: -4317.341
+Tree 191 / LogL: -4320.563
+Tree 192 / LogL: -4330.663
+Tree 193 / LogL: -4316.664
+Tree 194 / LogL: -4292.101
+Tree 195 / LogL: -4301.811
+Tree 196 / LogL: -4342.855
+Tree 197 / LogL: -4313.882
+Performing RELL-BP test...
+Performing KH and SH test...
+Performing ELW test...
+Performing approximately unbiased (AU) test...
+150 MB required for AU test
+Generating 10 x 10000 multiscale bootstrap replicates... 1.197 seconds
+TreeID	AU	RSS	d	c
+1	0.000	0.000	13.470	-4.276
+2	0.000	0.068	15.848	-5.420
+3	0.000	2.126	4.004	0.395
+4	0.000	1.947	3.889	0.373
+5	0.000	1.342	4.086	0.634
+6	0.000	1.636	4.195	0.322
+7	0.000	0.000	14.361	-4.712
+8	0.004	3.405	3.026	0.394
+9	0.000	0.000	17.689	-6.447
+10	0.002	1.687	3.248	0.359
+11	0.000	0.000	9.103	-1.924
+12	0.000	0.000	10.353	-2.666
+13	0.000	0.004	8.522	-1.074
+14	0.000	0.190	12.660	-3.785
+15	0.001	1.616	3.561	0.530
+16	0.000	0.000	12.456	-3.746
+17	0.002	2.165	3.650	0.725
+18	0.004	4.472	3.272	0.589
+19	0.000	0.000	13.232	-4.029
+20	0.000	0.412	13.186	-4.213
+21	0.000	0.189	5.264	-0.093
+22	0.000	3.275	3.951	0.119
+23	0.000	3.803	3.963	0.464
+24	0.009	10.530	2.940	0.561
+25	0.001	4.470	3.607	0.539
+26	0.000	0.000	10.575	-2.750
+27	0.005	6.304	3.042	0.447
+28	0.003	7.121	3.099	0.307
+29	0.012	2.653	3.303	1.034
+30	0.000	2.525	4.041	0.549
+31	0.003	1.334	3.638	0.842
+32	0.000	0.245	3.978	0.366
+33	0.032	3.102	2.819	0.960
+34	0.000	1.395	4.656	0.074
+35	0.001	2.780	3.506	0.502
+36	0.000	1.348	4.014	0.377
+37	0.000	0.036	8.661	-1.226
+38	0.001	7.209	3.259	0.276
+39	0.000	0.228	13.525	-4.520
+40	0.000	0.369	4.760	0.236
+41	0.002	2.606	3.157	0.302
+42	0.000	0.000	8.455	-1.211
+43	0.014	3.344	2.827	0.633
+44	0.018	4.673	2.910	0.813
+45	0.000	0.000	10.540	-2.778
+46	0.000	0.668	4.278	0.518
+47	0.000	0.487	10.445	-2.610
+48	0.000	0.000	5.541	0.923
+49	0.004	3.801	3.061	0.386
+50	0.016	9.055	2.541	0.386
+51	0.000	0.678	5.390	-0.217
+52	0.000	0.140	4.209	0.858
+53	0.000	0.000	10.617	-2.748
+54	0.047	7.862	2.301	0.622
+55	0.000	0.000	10.833	-2.980
+56	0.000	0.019	14.633	-4.750
+57	0.000	0.200	14.117	-4.627
+58	0.000	2.307	4.978	-0.201
+59	0.000	0.000	7.626	-0.641
+60	0.001	1.037	3.658	0.576
+61	0.013	4.287	2.953	0.728
+62	0.001	5.233	3.481	0.297
+63	0.001	2.468	3.629	0.647
+64	0.000	2.660	3.737	0.369
+65	0.000	0.000	7.351	-0.664
+66	0.005	0.580	3.628	1.078
+67	0.000	11.218	3.703	0.199
+68	0.000	0.040	12.270	-3.383
+69	0.000	0.061	9.330	-1.954
+70	0.002	3.864	3.564	0.686
+71	0.001	5.266	3.431	0.247
+72	0.005	5.343	3.185	0.622
+73	0.004	8.479	3.041	0.377
+74	0.000	1.063	5.359	-0.285
+75	0.000	2.524	3.836	0.407
+76	0.006	10.103	2.642	0.138
+77	0.001	4.013	3.659	0.434
+78	0.000	0.225	9.969	-2.370
+79	0.001	1.947	3.536	0.298
+80	0.000	0.036	15.016	-5.068
+81	0.013	6.989	2.860	0.636
+82	0.001	1.636	3.903	0.675
+83	0.001	1.997	3.942	0.699
+84	0.000	1.713	4.138	0.366
+85	0.001	1.795	3.639	0.454
+86	0.016	3.328	2.597	0.448
+87	0.002	1.137	3.781	0.950
+88	0.002	1.866	3.374	0.491
+89	0.000	2.017	4.424	0.032
+90	0.001	2.942	3.817	0.616
+91	0.000	0.084	10.168	-2.469
+92	0.009	1.093	3.429	1.068
+93	0.001	9.016	3.744	0.566
+94	0.000	6.133	3.585	0.157
+95	0.002	1.795	3.486	0.590
+96	0.000	0.989	5.058	-0.147
+97	0.000	0.000	10.159	-2.432
+98	0.000	0.000	13.146	-3.886
+99	0.015	4.176	2.905	0.722
+100	0.000	0.708	4.280	0.568
+101	0.000	1.381	4.444	0.158
+102	0.000	0.320	11.017	-2.940
+103	0.000	1.448	4.526	0.134
+104	0.000	0.242	5.002	0.095
+105	0.083	8.067	1.836	0.453
+106	0.003	3.154	3.341	0.564
+107	0.000	0.180	5.369	-0.318
+108	0.121	10.529	1.579	0.411
+109	0.000	0.106	14.159	-4.615
+110	0.000	0.700	4.445	0.138
+111	0.000	4.167	4.043	0.545
+112	0.000	1.229	4.972	-0.169
+113	0.002	0.168	3.894	0.988
+114	0.002	1.963	3.464	0.639
+115	0.002	2.493	3.234	0.349
+116	0.000	0.178	5.815	-0.557
+117	0.000	0.000	10.294	-2.661
+118	0.003	4.190	3.206	0.474
+119	0.000	0.057	13.265	-3.875
+120	0.003	4.165	3.156	0.406
+121	0.000	0.307	4.138	0.602
+122	0.000	3.911	5.442	-0.234
+123	0.003	3.635	3.036	0.331
+124	0.007	5.352	3.220	0.749
+125	0.000	0.357	4.287	0.378
+126	0.000	0.482	5.982	-0.496
+127	0.000	0.665	3.939	0.571
+128	0.000	0.000	14.285	-4.768
+129	0.008	3.879	3.291	0.877
+130	0.001	2.049	3.556	0.314
+131	0.004	1.585	3.589	0.896
+132	0.000	0.756	4.522	0.320
+133	0.000	0.508	4.348	0.238
+134	0.010	8.198	2.843	0.527
+135	0.000	0.305	11.829	-3.317
+136	0.000	0.321	4.781	0.244
+137	0.000	0.849	4.330	0.086
+138	0.002	5.986	3.256	0.389
+139	0.000	2.096	3.890	0.378
+140	0.000	0.122	10.623	-2.785
+141	0.000	0.077	12.580	-3.803
+142	0.000	0.000	10.202	-2.560
+143	0.000	0.170	5.313	-0.116
+144	0.017	8.614	2.680	0.568
+145	0.001	6.202	3.575	0.373
+146	0.000	3.077	5.903	-0.402
+147	0.000	0.428	5.132	-0.129
+148	0.000	0.000	15.968	-5.297
+149	0.000	3.222	3.970	0.252
+150	0.076	20.975	1.846	0.412 !!!
+151	0.098	11.046	1.581	0.286
+152	0.012	5.816	2.789	0.529
+153	0.000	1.256	8.361	-1.707
+154	0.001	4.347	3.712	0.562
+155	0.000	4.067	4.039	0.099
+156	0.029	3.719	2.237	0.347
+157	0.002	1.732	3.629	0.675
+158	0.000	0.623	4.962	-0.048
+159	0.010	2.551	2.919	0.593
+160	0.003	3.007	3.222	0.492
+161	0.000	0.000	9.908	-2.385
+162	0.000	0.467	4.692	-0.148
+163	0.000	3.818	3.642	0.246
+164	0.006	1.402	3.268	0.772
+165	0.001	0.547	4.081	0.820
+166	0.002	2.526	3.450	0.534
+167	0.000	0.000	15.655	-5.124
+168	0.002	4.331	3.687	0.763
+169	0.000	0.000	11.634	-3.434
+170	0.000	0.370	12.026	-3.607
+171	0.000	0.778	11.035	-3.056
+172	0.000	1.146	3.700	0.281
+173	0.000	0.000	9.696	-2.214
+174	0.006	5.299	3.138	0.633
+175	0.000	2.257	4.022	0.331
+176	0.000	0.489	4.667	0.303
+177	0.002	6.640	3.197	0.308
+178	0.002	2.826	3.457	0.637
+179	0.002	7.837	3.416	0.527
+180	0.985	18.880	-1.745	0.414
+181	0.005	7.439	3.068	0.518
+182	0.000	0.191	5.897	-0.279
+183	0.015	17.516	2.705	0.526
+184	0.000	1.280	12.844	-4.140
+185	0.000	0.220	7.236	-1.041
+186	0.009	1.166	3.333	0.976
+187	0.002	2.602	3.206	0.378
+188	0.000	0.391	4.684	0.296
+189	0.000	0.000	15.488	-5.502
+190	0.000	0.000	10.707	-2.802
+191	0.000	0.099	10.723	-2.804
+192	0.000	0.033	10.255	-2.361
+193	0.000	6.139	3.719	0.322
+194	0.001	4.899	3.794	0.548
+195	0.000	1.618	3.959	0.464
+196	0.000	0.000	10.419	-2.902
+197	0.000	1.548	4.459	0.323
+Time for AU test: 1.221 seconds
+Time for evaluating all trees: 19.144 sec.
+
+Analysis results written to: 
+  IQ-TREE report:                /gpfs0/bioinfo/projects/Itzhak_Mizrahi/09.Sarahm/05.Trees/02.AU-TEST/data//Generic/AU_TEST/OrthoGroup440/OrthoGroup440.iqtree
+  Maximum-likelihood tree:       /gpfs0/bioinfo/projects/Itzhak_Mizrahi/09.Sarahm/05.Trees/02.AU-TEST/data//Generic/AU_TEST/OrthoGroup440/OrthoGroup440.treefile
+  Likelihood distances:          /gpfs0/bioinfo/projects/Itzhak_Mizrahi/09.Sarahm/05.Trees/02.AU-TEST/data//Generic/AU_TEST/OrthoGroup440/OrthoGroup440.mldist
+  Evaluated user trees:          /gpfs0/bioinfo/projects/Itzhak_Mizrahi/09.Sarahm/05.Trees/02.AU-TEST/data//Generic/AU_TEST/OrthoGroup440/OrthoGroup440.trees
+  Screen log file:               /gpfs0/bioinfo/projects/Itzhak_Mizrahi/09.Sarahm/05.Trees/02.AU-TEST/data//Generic/AU_TEST/OrthoGroup440/OrthoGroup440.log
+
+Date and Time: Fri Apr 15 23:03:10 2022

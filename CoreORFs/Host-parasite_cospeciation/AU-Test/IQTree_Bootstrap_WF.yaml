@@ -1,0 +1,159 @@
+"Documentation": |-
+    WorkFlow's Documentation
+    =========================
+    Here you can document your workflow and add notes.
+    ---------------------------------------------------
+    * **important:**
+        1.  **DON'T** use the hash **#** symbol!!!
+            2. Don't forget to **save** the workflow at the Design tab!!!
+Global_params:
+    Executor: SGE
+    Default_wait: '10'
+    Qsub_opts: -cwd
+    Qsub_path: /storage/SGE6U8/bin/lx24-amd64/
+    Qsub_q: bioinfo.q
+    conda:
+        path: '{Vars.conda.base}'
+        env: '{Vars.conda.env}'
+Vars:
+    Programs:
+        IQTREE: iqtree2
+    Genome: null
+    conda:
+        base: null
+        env: IQ_Tree
+    OutGroup: Clostridium_thermobutyricum
+Step_params:
+    Import:
+        module: Import
+        script_path: cat
+    Make_Trees_Bootstarp:
+        module: Generic
+        base: Import
+        script_path: iqtree2
+        scope: sample
+        inputs:
+            -s:
+                scope: sample
+                File_Type: fasta.prot
+                base: null
+        outputs:
+            -pre:
+                File_Type: outdir
+                prefix: null
+                suffix: null
+            No_run1:
+                File_Type: nwk
+                prefix: null
+                suffix: .treefile
+        redirects:
+            -T: AUTO
+            --threads-max: 10
+            -o: '{Vars.OutGroup}'
+            -B: 1000
+        qsub_params:
+            -pe: shared 10
+        tag: Make_Trees
+    Merge_Trees:
+        module: Generic
+        base: Make_Trees_Bootstarp
+        script_path: cat
+        scope: project
+        inputs:
+            empty1:
+                scope: sample
+                File_Type: nwk
+                base: null
+        outputs:
+            '>':
+                File_Type: nwk
+                prefix: null
+                suffix: .nwk
+        tag: merge
+    AU_TEST:
+        module: Generic
+        base: Merge_Trees
+        script_path: iqtree2
+        scope: sample
+        inputs:
+            -s:
+                scope: sample
+                File_Type: fasta.prot
+                base: null
+            -z:
+                scope: project
+                File_Type: nwk
+                base: null
+        outputs:
+            -pre:
+                File_Type: outdir
+                prefix: null
+                suffix: null
+            No_run1:
+                File_Type: nwk
+                prefix: null
+                suffix: .treefile
+        redirects:
+            -T: AUTO
+            --threads-max: 10
+            -o: '{Vars.OutGroup}'
+            -au: null
+            -zb: 10000
+        qsub_params:
+            -pe: shared 1
+        tag: AU-TEST
+    Extract_AU_Results:
+        module: Generic
+        base: AU_TEST
+        script_path: 'sed -n ''/TreeID/,/Time for AU/p''  '
+        scope: sample
+        inputs:
+            empty1:
+                scope: sample
+                File_Type: outdir
+                suffix: .log | sed '$ d'
+        outputs:
+            '>':
+                File_Type: au_res
+                prefix: null
+                suffix: .au
+        tag: results
+    Collect_results:
+        module: Collect_results
+        base: Extract_AU_Results
+        script_path: null
+        redirects:
+            --add_samples_names: null
+            --pivot: '''Samples'' ''TreeID'' ''AU'''
+            --split_by: ','
+            -R: .au$
+        conda:
+            env: Microbe-Flow
+    Extract_AU_CHI2:
+        module: Generic
+        base: AU_TEST
+        script_path: 'sed -n ''/   1  /,/TOTAL/p''  '
+        scope: sample
+        inputs:
+            empty1:
+                scope: sample
+                File_Type: outdir
+                suffix: '.log | sed -n ''/   1  /,/WARNING:/p'' | sed ''$ d'' | sed "s/ \+/\t/g" '
+        outputs:
+            '>':
+                File_Type: au_res
+                prefix: null
+                suffix: .au
+        tag: results_chi
+    Collect_results_CHI2:
+        module: Collect_results
+        base: Extract_AU_CHI2
+        script_path: null
+        redirects:
+            --add_samples_names: null
+            --pivot: '''Samples'' ''2'' ''4'''
+            --split_by: ','
+            -R: .au$
+            --header: null
+        conda:
+            env: Microbe-Flow

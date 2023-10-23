@@ -41,6 +41,8 @@ option_list = list(
               help="Tip to remove from all the trees", metavar="character"),
   make_option(c("-G","--host_outgroup"), type="character", default=NA, 
               help="Host OutGroup", metavar="character"),
+  make_option(c("-B","--bac2host_file"), type="character", default=NA, 
+              help="File connecting Host to Bacteria [tab delimited with 2 columns 'Bac' and 'Host' ]", metavar="character"),
   make_option(c("-g","--tree_outgroup"), type="character", default=NA, 
               help="Host OutGroup", metavar="character"),
   make_option(c("-c","--cpu"), type="numeric", default = 1, 
@@ -72,20 +74,17 @@ host_tree     = opt$host_tree
 method        = opt$method
 host_outgroup = opt$host_outgroup
 tree_outgroup = opt$tree_outgroup
-
+bac2host_file = opt$bac2host_file
 
 original_tree_outgroup = tree_outgroup
 
-Host_lables =  c("Bos_taurus","Papio_cynocephalus","Macaca_fascicularis","Homo_sapiens")
-names(Host_lables) = c("Rumen","baboon","maccaque","Human")
-
+bac2host = read.delim(bac2host_file)
 
 reorder_tip = function(tree){
   is_tip <- tree$edge[,2] <= length(tree$tip.label)
   ordered_tips <- tree$tip.label[tree$edge[is_tip, 2]]
   return(ordered_tips)
 }
-
 
 untangle = function(tree1,tree2){
   tree1_roteted = tree1
@@ -124,102 +123,22 @@ untangle = function(tree1,tree2){
  
 }
 
-culculate_cor_old <- function(original_Host_tree,tree,Host_lables,method,plot_dend=NA){ 
-  Host_tree = original_Host_tree
-  for (host in names(Host_lables)){
-    temp = tree$tip.label[stringr::str_starts(string = tree$tip.label,pattern = host) ]
-    # dato = data.frame(bind=temp,reference=rep(Host_lables[host],length(temp)),poly=F)
-    ref =Host_lables[host]
-    # permutations(length(temp), 1, temp, repeats = FALSE)
-    # for (tip in sample(temp)){
-    for (tip in temp){
-      dato = data.frame(bind=tip,reference=ref,poly=F)
-      Host_tree = RRphylo::tree.merger(backbone=Host_tree,data=dato,plot=F)
-      ref = tip
-    }
-    Host_tree = ape::drop.tip(phy = Host_tree,tip = Host_lables[host] )
-  }
-  
-  #Host_tree$edge.length = Host_tree$edge.length+0.0000001
-  
-  Host_tree_r = stats::as.dendrogram(Host_tree)
-  tree_r      = stats::as.dendrogram(tree)
-  
-  dl <- dendextend::dendlist(Host_tree_r, tree_r)
-  x = dendextend::untangle(dl,method = "step2side")
-  
-  new_tree = ape::as.phylo(x[[1]])
-  
-  Host_tree = original_Host_tree
-  tip.label = rev(new_tree$tip.label)
-  for (host in names(Host_lables)){
-    temp = tip.label[stringr::str_starts(string = tip.label,pattern = host) ]
-    # dato = data.frame(bind=temp,reference=rep(Host_lables[host],length(temp)),poly=F)
-    ref =Host_lables[host]
-    # permutations(length(temp), 1, temp, repeats = FALSE)
-    # for (tip in sample(temp)){
-    for (tip in temp){
-      dato = data.frame(bind=tip,reference=ref,poly=F)
-      Host_tree = RRphylo::tree.merger(backbone=Host_tree,data=dato,plot=F)
-      ref = tip
-    }
-    Host_tree = ape::drop.tip(phy = Host_tree,tip = Host_lables[host] )
-  }
-  
-  #Host_tree$edge.length = Host_tree$edge.length+0.0000001
-  
-  Host_tree_r = stats::as.dendrogram(Host_tree)
-  dl <- dendextend::dendlist(Host_tree_r, tree_r)
-  x = dendextend::untangle(dl,method = "step2side")
-  if (!is.na(plot_dend)){
-         pdf(file = plot_dend)
-         tanglegram(x,center = F,
-                   common_subtrees_color_lines = FALSE, highlight_distinct_edges  = FALSE, highlight_branches_lwd = FALSE,
-                   margin_inner = 10,rank_branches = T,lab.cex=0.5,columns_width=c(5,1,5))
-         dev.off()
-     # if (method=='correlation') {
-         # pdf(file = plot_dend)
-         # tanglegram(x,center = F,
-                   # common_subtrees_color_lines = FALSE, highlight_distinct_edges  = FALSE, highlight_branches_lwd = FALSE,
-                   # margin_inner = 10,rank_branches = T,lab.cex=0.5,columns_width=c(5,1,5))
-         # dev.off()
-     # } else {
-        # pdf(file = plot_dend)
-        # plotTreeDiff(ape::as.phylo(x[[1]]), ape::as.phylo(x[[2]]), use.edge.length=FALSE, 
-             # treesFacing = TRUE,sizeOfDifferences = T)
-        # dev.off()
-     # }
-  }
-  if (method=='correlation'){
-    tree_dist = dendextend::cor.dendlist(dl)[2,1]
-  }else if (method == 'treeDist' ){
-    tree_dist = treeDist(ape::as.phylo(x[[1]]), ape::as.phylo(x[[2]]))
-  }else if (method=='gammaindex'){
-    tree_dist =  cor_bakers_gamma(ape::as.phylo(x[[1]]), ape::as.phylo(x[[2]]))
-  }else{
-    tree_dist = dist.topo(ape::as.phylo(x[[1]]), ape::as.phylo(x[[2]]))[1]
-  }
-  
-  return(tree_dist)
-}
-
-
-culculate_cor <- function(original_Host_tree,tree,Host_lables,method,plot_dend=NA){ 
+culculate_cor <- function(original_Host_tree,tree,bac2host,method,plot_dend=NA){ 
    Host_tree = original_Host_tree
    if ( method == 'dist.topo' ){
         Host_tree = original_Host_tree
-        for (host in names(Host_lables)){
-          temp = reorder_tip(tree)[stringr::str_starts(string = reorder_tip(tree),pattern = host) ]
-          dato = data.frame(bind=temp,reference=rep(Host_lables[host],length(temp)),poly=F)
-          Host_tree = RRphylo::tree.merger(backbone=Host_tree,data=dato,plot=F)
-          Host_tree = ape::drop.tip(phy = Host_tree,tip = Host_lables[host] )
+        for (host in unique(bac2host[,"Host"])){
+              temp =  reorder_tip(tree)[reorder_tip(tree)  %in%  bac2host[bac2host$Host==x,"Bac"]]
+              dato = data.frame(bind=temp,reference=rep(host,length(temp)),poly=F)
+              Host_tree = RRphylo::tree.merger(backbone=Host_tree,data=dato,plot=F)
+              Host_tree = ape::drop.tip(phy = Host_tree,tip = host )
         }
         x <- untangle(Host_tree,tree)
     } else {
         
-        for (host in names(Host_lables)){
-            temp = reorder_tip(tree)[stringr::str_starts(string = reorder_tip(tree),pattern = host) ]
-            ref =Host_lables[host]
+        for (host in unique(bac2host[,"Host"])){
+            temp =  reorder_tip(tree)[reorder_tip(tree)  %in%  bac2host[bac2host$Host==x,"Bac"]]
+            ref =host
             # permutations(length(temp), 1, temp, repeats = FALSE)
             # for (tip in sample(temp)){
             for (tip in temp){
@@ -227,7 +146,7 @@ culculate_cor <- function(original_Host_tree,tree,Host_lables,method,plot_dend=N
               Host_tree = RRphylo::tree.merger(backbone=Host_tree,data=dato,plot=F)
               ref = tip
             }
-            Host_tree = ape::drop.tip(phy = Host_tree,tip = Host_lables[host] )
+            Host_tree = ape::drop.tip(phy = Host_tree,tip = host )
         }
         
         #Host_tree$edge.length = Host_tree$edge.length+0.0000001
@@ -242,18 +161,15 @@ culculate_cor <- function(original_Host_tree,tree,Host_lables,method,plot_dend=N
         
         Host_tree = original_Host_tree
         tip.label = rev(reorder_tip(new_tree))
-        for (host in names(Host_lables)){
-            temp = tip.label[stringr::str_starts(string = tip.label,pattern = host) ]
-            # dato = data.frame(bind=temp,reference=rep(Host_lables[host],length(temp)),poly=F)
-            ref =Host_lables[host]
-            # permutations(length(temp), 1, temp, repeats = FALSE)
-            # for (tip in sample(temp)){
+        for (host in unique(bac2host[,"Host"])){
+            temp =  reorder_tip(tree)[reorder_tip(tree)  %in%  bac2host[bac2host$Host==x,"Bac"]]
+            ref =host
             for (tip in temp){
               dato = data.frame(bind=tip,reference=ref,poly=F)
               Host_tree = RRphylo::tree.merger(backbone=Host_tree,data=dato,plot=F)
               ref = tip
             }
-            Host_tree = ape::drop.tip(phy = Host_tree,tip = Host_lables[host] )
+            Host_tree = ape::drop.tip(phy = Host_tree,tip = host )
         }
         #Host_tree$edge.length = Host_tree$edge.length+0.0000001
         Host_tree_r = stats::as.dendrogram(Host_tree)
@@ -316,19 +232,21 @@ for (file in list.files(path =dir ,pattern = opt$tree_file_pattern)){
       tree = ape::drop.tip(phy = tree,tip = opt$lable2drop )
     }
     Host_tree = original_Host_tree
-    for (host in names(Host_lables)){
-      temp = reorder_tip(tree)[stringr::str_starts(string = reorder_tip(tree),pattern = host) ]
-      dato = data.frame(bind=temp,reference=rep(Host_lables[host],length(temp)),poly=F)
+    for (host in unique(bac2host[,"Host"])){
+      # temp = reorder_tip(tree)[stringr::str_starts(string = reorder_tip(tree),pattern = host) ]
+      temp =  reorder_tip(tree)[reorder_tip(tree)  %in%  bac2host[bac2host$Host==x,"Bac"]]
+      # dato = data.frame(bind=temp,reference=rep(Host_lables[host],length(temp)),poly=F)
+      dato = data.frame(bind=temp,reference=rep(host,length(temp)),poly=F)
       Host_tree = RRphylo::tree.merger(backbone=Host_tree,data=dato,plot=F)
-      Host_tree = ape::drop.tip(phy = Host_tree,tip = Host_lables[host] )
+      Host_tree = ape::drop.tip(phy = Host_tree,tip = host )
     }
     host_dist = adephylo::distTips(x = Host_tree,method = "patristic")
     tree_dist = adephylo::distTips(x = tree,method = "patristic")
     
-	tree_dist = as.matrix(tree_dist)
-	host_dist = as.matrix(host_dist)
-	host_dist <- host_dist[rownames(tree_dist),colnames(tree_dist)]
-	results = ade4::mantel.rtest(m1 = as.dist(host_dist),as.dist(tree_dist),nrepet = Nboots)
+    tree_dist = as.matrix(tree_dist)
+    host_dist = as.matrix(host_dist)
+    host_dist <- host_dist[rownames(tree_dist),colnames(tree_dist)]
+    results = ade4::mantel.rtest(m1 = as.dist(host_dist),as.dist(tree_dist),nrepet = Nboots)
     data[file,'Original'] = results$obs
     data[file,'P_Value']  = results$pvalue
     write.csv(tree_dist,file =file.path(out_dir,paste(file,'.dist.csv',sep='') ))
