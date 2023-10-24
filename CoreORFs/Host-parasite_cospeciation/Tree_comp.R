@@ -128,7 +128,7 @@ culculate_cor <- function(original_Host_tree,tree,bac2host,method,plot_dend=NA){
    if ( method == 'dist.topo' ){
         Host_tree = original_Host_tree
         for (host in unique(bac2host[,"Host"])){
-              temp =  reorder_tip(tree)[reorder_tip(tree)  %in%  bac2host[bac2host$Host==x,"Bac"]]
+              temp =  reorder_tip(tree)[reorder_tip(tree)  %in%  bac2host[bac2host$Host==host,"Bac"]]
               dato = data.frame(bind=temp,reference=rep(host,length(temp)),poly=F)
               Host_tree = RRphylo::tree.merger(backbone=Host_tree,data=dato,plot=F)
               Host_tree = ape::drop.tip(phy = Host_tree,tip = host )
@@ -137,7 +137,7 @@ culculate_cor <- function(original_Host_tree,tree,bac2host,method,plot_dend=NA){
     } else {
         
         for (host in unique(bac2host[,"Host"])){
-            temp =  reorder_tip(tree)[reorder_tip(tree)  %in%  bac2host[bac2host$Host==x,"Bac"]]
+            temp =  reorder_tip(tree)[reorder_tip(tree)  %in%  bac2host[bac2host$Host==host,"Bac"]]
             ref =host
             # permutations(length(temp), 1, temp, repeats = FALSE)
             # for (tip in sample(temp)){
@@ -162,7 +162,7 @@ culculate_cor <- function(original_Host_tree,tree,bac2host,method,plot_dend=NA){
         Host_tree = original_Host_tree
         tip.label = rev(reorder_tip(new_tree))
         for (host in unique(bac2host[,"Host"])){
-            temp =  reorder_tip(tree)[reorder_tip(tree)  %in%  bac2host[bac2host$Host==x,"Bac"]]
+            temp =  reorder_tip(tree)[reorder_tip(tree)  %in%  bac2host[bac2host$Host==host,"Bac"]]
             ref =host
             for (tip in temp){
               dato = data.frame(bind=tip,reference=ref,poly=F)
@@ -215,7 +215,8 @@ culculate_cor <- function(original_Host_tree,tree,bac2host,method,plot_dend=NA){
 }
 
 
-data = data.frame()
+data      = data.frame()
+dist_data = data.frame()
 
 cl <- makeCluster(cpu)
 registerDoParallel(cl)
@@ -228,13 +229,18 @@ for (file in list.files(path =dir ,pattern = opt$tree_file_pattern)){
   print(file.path(dir,file))
   tree          = ape::read.tree(file = file.path(dir,file))
   if (method == "mantel"){
+    
+    tree_dist = adephylo::distTips(x = tree,method = "patristic")
+    tree_dist = as.matrix(tree_dist)
+    dist_data = rbind(dist_data,cbind(file,t(tree_dist[,tree_outgroup])))
+    
     if (!is.na(opt$lable2drop)){
       tree = ape::drop.tip(phy = tree,tip = opt$lable2drop )
     }
     Host_tree = original_Host_tree
     for (host in unique(bac2host[,"Host"])){
       # temp = reorder_tip(tree)[stringr::str_starts(string = reorder_tip(tree),pattern = host) ]
-      temp =  reorder_tip(tree)[reorder_tip(tree)  %in%  bac2host[bac2host$Host==x,"Bac"]]
+      temp =  reorder_tip(tree)[reorder_tip(tree)  %in%  bac2host[bac2host$Host==host,"Bac"]]
       # dato = data.frame(bind=temp,reference=rep(Host_lables[host],length(temp)),poly=F)
       dato = data.frame(bind=temp,reference=rep(host,length(temp)),poly=F)
       Host_tree = RRphylo::tree.merger(backbone=Host_tree,data=dato,plot=F)
@@ -246,11 +252,15 @@ for (file in list.files(path =dir ,pattern = opt$tree_file_pattern)){
     tree_dist = as.matrix(tree_dist)
     host_dist = as.matrix(host_dist)
     host_dist <- host_dist[rownames(tree_dist),colnames(tree_dist)]
+    
+    print( all(colnames(tree_dist) == colnames(host_dist)) )
+    print( all(rownames(tree_dist) == rownames(host_dist)) )
+    
     results = ade4::mantel.rtest(m1 = as.dist(host_dist),as.dist(tree_dist),nrepet = Nboots)
     data[file,'Original'] = results$obs
     data[file,'P_Value']  = results$pvalue
-    write.csv(tree_dist,file =file.path(out_dir,paste(file,'.dist.csv',sep='') ))
-    write.csv(host_dist,file =file.path(out_dir,paste("Host",'.dist.csv',sep='') ))
+    # write.csv(tree_dist,file =file.path(out_dir,paste(file,'.dist.csv',sep='') ))
+    # write.csv(host_dist,file =file.path(out_dir,paste("Host",'.dist.csv',sep='') ))
     
   }else{
       tree$edge.length = tree$edge.length+0.0000001
@@ -298,6 +308,8 @@ for (file in list.files(path =dir ,pattern = opt$tree_file_pattern)){
 save(data,file =file.path(out_dir,paste('Results_',method,sep='') ))
 if (method != "mantel"){
     data[,3] = paste(data[,3],collapse = ',',sep = ',')
+}else{
+    write.csv(dist_data,file =file.path(out_dir,paste('Results_Dist2OutGroup',method,'.csv',sep='') ))
 }
 write.csv(data,file =file.path(out_dir,paste('Results_',method,'.csv',sep='') ))
 stopCluster(cl)
